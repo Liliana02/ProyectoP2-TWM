@@ -1,0 +1,12 @@
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\bin\Debug\net7.0\AguadeCactus.Core.deps.json
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\bin\Debug\net7.0\AguadeCactus.Core.dll
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\bin\Debug\net7.0\AguadeCactus.Core.pdb
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\AguadeCactus.Core.csproj.AssemblyReference.cache
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\AguadeCactus.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\AguadeCactus.Core.AssemblyInfoInputs.cache
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\AguadeCactus.Core.AssemblyInfo.cs
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\AguadeCactus.Core.csproj.CoreCompileInputs.cache
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\AguadeCactus.Core.dll
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\refint\AguadeCactus.Core.dll
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\AguadeCactus.Core.pdb
+C:\Users\Liliana Lozano\RiderProjects\AguadeCactus\AguadeCactus.Core\obj\Debug\net7.0\ref\AguadeCactus.Core.dll

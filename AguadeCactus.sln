@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AguadeCactus.Api", "AguadeCactus.Api\AguadeCactus.Api.csproj", "{02D895D5-2A84-4A19-824B-26E4FBD9EF9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AguadeCactus.Core", "AguadeCactus.Core\AguadeCactus.Core.csproj", "{E19998A6-0A85-4CA9-826C-A53D4C3429BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AguadeCactus.Tests", "AguadeCactus.Tests\AguadeCactus.Tests.csproj", "{358A2819-D2B9-49C1-B611-1E866832F318}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02D895D5-2A84-4A19-824B-26E4FBD9EF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02D895D5-2A84-4A19-824B-26E4FBD9EF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02D895D5-2A84-4A19-824B-26E4FBD9EF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02D895D5-2A84-4A19-824B-26E4FBD9EF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E19998A6-0A85-4CA9-826C-A53D4C3429BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E19998A6-0A85-4CA9-826C-A53D4C3429BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E19998A6-0A85-4CA9-826C-A53D4C3429BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E19998A6-0A85-4CA9-826C-A53D4C3429BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{358A2819-D2B9-49C1-B611-1E866832F318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{358A2819-D2B9-49C1-B611-1E866832F318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{358A2819-D2B9-49C1-B611-1E866832F318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{358A2819-D2B9-49C1-B611-1E866832F318}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
