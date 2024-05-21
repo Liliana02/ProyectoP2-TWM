@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AguadeCactus.Core", "Aguade
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AguadeCactus.Tests", "AguadeCactus.Tests\AguadeCactus.Tests.csproj", "{358A2819-D2B9-49C1-B611-1E866832F318}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AguadeCactus.WebApp", "AguadeCactus.WebApp\AguadeCactus.WebApp.csproj", "{E27AC661-BC7A-4B20-B8BC-6AB65FC2EA03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AguadeCactus.WebSite", "AguadeCactus.WebSite\AguadeCactus.WebSite.csproj", "{7FA9417E-162E-4E9B-B97D-F22CF7180089}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{358A2819-D2B9-49C1-B611-1E866832F318}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{358A2819-D2B9-49C1-B611-1E866832F318}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{358A2819-D2B9-49C1-B611-1E866832F318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E27AC661-BC7A-4B20-B8BC-6AB65FC2EA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27AC661-BC7A-4B20-B8BC-6AB65FC2EA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27AC661-BC7A-4B20-B8BC-6AB65FC2EA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27AC661-BC7A-4B20-B8BC-6AB65FC2EA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA9417E-162E-4E9B-B97D-F22CF7180089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA9417E-162E-4E9B-B97D-F22CF7180089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA9417E-162E-4E9B-B97D-F22CF7180089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA9417E-162E-4E9B-B97D-F22CF7180089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

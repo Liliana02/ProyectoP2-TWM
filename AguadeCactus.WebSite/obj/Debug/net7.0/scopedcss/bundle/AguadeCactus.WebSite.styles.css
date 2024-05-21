@@ -1,0 +1,49 @@
+/* _content/AguadeCactus.WebSite/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-zdw5jvktx6] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-zdw5jvktx6] {
+  color: #0077cc;
+}
+
+.btn-primary[b-zdw5jvktx6] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-zdw5jvktx6], .nav-pills .show > .nav-link[b-zdw5jvktx6] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-zdw5jvktx6] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-zdw5jvktx6] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-zdw5jvktx6] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-zdw5jvktx6] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-zdw5jvktx6] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
