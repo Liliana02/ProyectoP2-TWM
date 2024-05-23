@@ -1,0 +1,71 @@
+﻿@page
+@model AguadeCactus.WebSite.Pages.User.Login
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AguadeCactus.WebSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/userL.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
+</head>
+<body class="bg-black">
+<header>
+    <nav class="navbar navbar-light bg-success border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto font-monospace text-light" asp-area="" asp-page="/User/Login">Agua de Cactus</a>
+        </div>
+    </nav>
+</header>
+<div class="container center-content-container">
+    <main role="main" class="pb-3">
+        <div class="center-image-text">
+            <div>
+                <img src="~/cactus.png" alt="Cactus bebe" class="cactus-image">
+            </div>
+            <div>
+                <h1 class="text-white">Agua de Cactus</h1>
+                <h8 class="text-white">La casa del frappé desde 2019</h8>
+                <br/>
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="loginName">Usuario</label>
+                    <br/>
+                    <input type="email" id="loginName" class="form-control"/>
+
+                </div>
+                <!-- Password input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="loginPassword">Contraseña</label>
+                    <br/>
+                    <input type="password" id="loginPassword" class="form-control"/>
+
+                </div>
+                <a href="~/Index" class="btn btn-light btn-lg btn-block">Ingresar</a>
+                <br/>
+                <!-- Register buttons -->
+                      <div class="text-center">
+                        <p>¿Nuevo usuario? <a href="~/User/Add">Crear cuenta</a></p>
+                      </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+
+</body>
+</html>
+

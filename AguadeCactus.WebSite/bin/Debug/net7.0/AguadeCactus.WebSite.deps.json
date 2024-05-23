@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "AguadeCactus.WebSite/1.0.0": {
+        "dependencies": {
+          "AguadeCactus.Core": "1.0.0"
+        },
         "runtime": {
           "AguadeCactus.WebSite.dll": {}
+        }
+      },
+      "AguadeCactus.Core/1.0.0": {
+        "runtime": {
+          "AguadeCactus.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
     "AguadeCactus.WebSite/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AguadeCactus.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

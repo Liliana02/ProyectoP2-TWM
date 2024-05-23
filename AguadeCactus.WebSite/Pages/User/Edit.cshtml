@@ -1,19 +1,105 @@
 ﻿@page
 @model AguadeCactus.WebSite.Pages.User.Edit
 
-@{
-    Layout = null;
-}
 
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AguadeCactus.WebSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/userA.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
 </head>
-<body>
-<div>
-    
+<body class="bg-black">
+<div class="container center-content-container">
+    <main role="main" class="pb-3">
+        <div class="center-image-text">
+            <div>
+                <img src="~/cactus.png" alt="Cactus bebe" class="cactus-image">
+                <br/>
+                <a href="" class="btn btn-light btn-lg btn-block">Guardar</a>
+                <br/>
+                <br/>
+                <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
+                <br/>
+                <br/>
+                <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
+                <br/>
+                <br/>
+                <a href="~/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
+            </div>
+            <form>
+                <div class="row">
+                    <h1 class="text-white">Agua de Cactus</h1>
+                    <h8 class="text-white">La casa del frappé desde 2019</h8>
+                    <br/>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Usuario">
+                        <br/>
+                        <input type="text" class="form-control" placeholder="Nombre(s)">
+                        <br/>
+                        <input type="text" class="form-control" placeholder="Apellidos">
+                        <br/>
+                        <input type="text" class="form-control" placeholder="Contraseña">
+                    </div>
+                    <div class="col">
+                        <div class="form-group col-md-4">
+                            <label for="inputAge">Edad</label>
+                            <select id="inputAge" class="form-control">
+                                <option selected>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                                <option>25</option>
+                                <option>26</option>
+                                <option>27</option>
+                                <option>28</option>
+                                <option>29</option>
+                                <option>30</option>
+                                <option>31</option>
+                                <option>32</option>
+                                <option>33</option>
+                                <option>34</option>
+                                <option>35</option>
+                            </select>
+                        </div>
+                        <br/>
+                        <div class="form-group col-md-4">
+                            <label for="inputGender">Género</label>
+                            <select id="inputGender" class="form-control">
+                                <option selected>Mujer</option>
+                                <option>Hombre</option>
+                                <option>No binario</option>
+                            </select>
+                        </div>
+                        <br/>
+                        <div class="form-group col-md-4">
+                            <label for="inputRol">Rol</label>
+                            <select id="inputRol" class="form-control">
+                                <option selected>Administrador</option>
+                                <option>Empleado</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
 </div>
+
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+
 </body>
 </html>

@@ -7,44 +7,87 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
 </head>
-<body>
+<body class="bg-black">
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
-            <a class="navbar-brand" asp-area="" asp-page="/Index">AguadeCactus.WebSite</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+    <nav class="navbar navbar-light bg-success border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
+            <a class="navbar-brand mx-auto font-monospace text-light" asp-area="" asp-page="/Index">Agua de Cactus</a>
+            <a href="~/User/Edit" class="btn btn-outline-light ms-auto">
+                <i class="bi bi-emoji-laughing"></i>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        <a class="nav-link text-light" asp-area="" asp-page="/Category/List">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                        <a class="nav-link text-light" asp-area="" asp-page="/PaymentMethod/List">Métodos de pago</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/Product/List">Menú</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/Promotion/List">Promociones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/Sale/List">Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/SaleDetail/List">Detalles de Ventas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/User/List">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="container">
+<div class="container center-content-container">
     <main role="main" class="pb-3">
         @RenderBody()
+        
     </main>
 </div>
 
-<footer class="border-top footer text-muted">
+<footer class="border-top footer text-white bg-success">
     <div class="container">
-        &copy; 2024 - AguadeCactus.WebSite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        &copy; 2024 - AguadeCactus - <a class="text-light" asp-area="" asp-page="/Privacy">Privacy</a>
     </div>
 </footer>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+<script>
+    // Collapse the navbar after clicking a link
+    document.addEventListener('DOMContentLoaded', function () {
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+        var navbarToggler = document.querySelector('.navbar-toggler');
+
+        // Toggle the navbar on button click
+        navbarToggler.addEventListener('click', function () {
+            navbarCollapse.classList.toggle('show');
+        });
+
+        // Close the navbar when a link is clicked
+        var navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                navbarCollapse.classList.remove('show');
+            });
+        });
+    });
+</script>
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

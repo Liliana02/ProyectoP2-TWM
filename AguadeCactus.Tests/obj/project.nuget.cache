@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "unQ3mRERqvR+84nZIgxjU4TsMeGgWGzENc8A6PdcO/y/m0kkh/PpsbjLoZwKIilreQo5mfrAGmtLQzCV/4vcHQ==",
+  "dgSpecHash": "y+kEL6DHR2Ddr1Q/AYm8skrzGw0RfxCxtvfMx0/aZD591GjJuEUVgHxzhU/ORXJG2KzcH77xni07VMacXpEROg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Tests\\AguadeCactus.Tests.csproj",
+  "projectFilePath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Tests\\AguadeCactus.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
+      "projectUniqueName": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
       "projectName": "AguadeCactus.Core",
-      "projectPath": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
+      "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
       "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Core\\obj\\",
+      "outputPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"

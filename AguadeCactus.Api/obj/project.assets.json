@@ -685,11 +685,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
+      "projectUniqueName": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
       "projectName": "AguadeCactus.Api",
-      "projectPath": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
+      "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
       "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Api\\obj\\",
+      "outputPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
@@ -711,8 +711,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
-              "projectPath": "C:\\Users\\Liliana Lozano\\RiderProjects\\AguadeCactus\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
+            "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
+              "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
             }
           }
         }
