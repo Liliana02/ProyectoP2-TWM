@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\category.css"
     },
     {
+      "Id": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\css\\menu.css",
+      "PackagePath": "staticwebassets\\css\\menu.css"
+    },
+    {
       "Id": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\css\\paymentmethod.css",
       "PackagePath": "staticwebassets\\css\\paymentmethod.css"
     },

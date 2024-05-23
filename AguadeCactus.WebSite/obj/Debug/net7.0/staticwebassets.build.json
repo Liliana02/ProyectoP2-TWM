@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "O14SJjtxxNtU7Ypa9BEkxuBnIB2yzZmWEqay51dRCyM=",
+  "Hash": "eYt6y+cH7dIZfG0WmTb+dp+dFBKKg6IlBG6ZlKpUuZs=",
   "Source": "AguadeCactus.WebSite",
   "BasePath": "_content/AguadeCactus.WebSite",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\category.css"
+    },
+    {
+      "Identity": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\css\\menu.css",
+      "SourceId": "AguadeCactus.WebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\",
+      "BasePath": "_content/AguadeCactus.WebSite",
+      "RelativePath": "css/menu.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\menu.css"
     },
     {
       "Identity": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\css\\paymentmethod.css",
