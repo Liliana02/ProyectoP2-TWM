@@ -5,7 +5,6 @@ using AguadeCactus.Api.Services.Interfaces;
 using AguadeCactus.Core.Entities;
 using AguadeCactus.Core.Http;
 
-
 namespace AguadeCactus.Api.Controllers;
 
 [ApiController]
@@ -34,12 +33,14 @@ public class CategoryController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<Category>>> Post([FromBody] CategoryDto categoryDto)
     {
-        var response = new Response<CategoryDto>
+        var response = new Response<CategoryDto>();
+        if (await _categoryService.ExistByName(categoryDto.Name))
         {
-            Data = await _categoryService.SaveAsync(categoryDto)
-        };
-        
-        
+            response.Errors.Add($"Category name {categoryDto.Name} already exists");
+            return BadRequest(response);
+        }
+
+        response.Data = await _categoryService.SaveAsync(categoryDto);
         return Created($"/api/[controller]/{categoryDto.id}", response);
     }
 
@@ -60,18 +61,22 @@ public class CategoryController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut("{id:int}")]
-    public async Task<ActionResult<Response<CategoryDto>>> Update(int id, [FromBody] CategoryDto categoryDto)
+    [HttpPut]
+    public async Task<ActionResult<Response<CategoryDto>>> Update([FromBody] CategoryDto categoryDto)
     {
         var response = new Response<CategoryDto>();
 
-        if (!await _categoryService.CategoryExist(id))
+        if (!await _categoryService.CategoryExist(categoryDto.id))
         {
             response.Errors.Add("Category not Found");
                 return NotFound(response);
         }
 
-        categoryDto.id = id;
+        if (await _categoryService.ExistByName(categoryDto.Name, categoryDto.id))
+        {
+            response.Errors.Add($"Category Name {categoryDto.Name} already exists");
+            return BadRequest(response);
+        }
         response.Data = await _categoryService.UpdateAsync(categoryDto);
         return Ok(response);
     }

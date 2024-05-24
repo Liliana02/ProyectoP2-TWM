@@ -1,0 +1,49 @@
+﻿@page
+@model AguadeCactus.WebSite.Pages.Category.AddCategoryPayment
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AguadeCactus.WebSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/category.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
+</head>
+<body>
+<div>
+    <form method="post">
+        <div>
+            <input type="hidden"/>
+            <h1 class="text-white">Categorias y pagos</h1>
+            <h2 class="text-white">Categorias</h2>
+            <input asp-for="CategoryDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
+            <span class="text-danger" asp-validation-for="CategoryDto.Name"></span>
+            <input asp-for="CategoryDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
+            <span class="text-danger" asp-validation-for="CategoryDto.Description"></span>
+            <button type="submit" class="btn btn-primary mr-3">Save</button>
+            <a href="" class="btn btn-light btn-lg btn-block">Cancelar</a>
+        </div>
+        @if (Model.Errors.Count > 0) 
+        {
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    @foreach (var error in Model.Errors)
+                    {
+                        <li>An error</li>
+                    }
+                    </ul>
+                    </div>
+        }
+        
+    </form>
+    
+
+</div>
+</body>
+</html>

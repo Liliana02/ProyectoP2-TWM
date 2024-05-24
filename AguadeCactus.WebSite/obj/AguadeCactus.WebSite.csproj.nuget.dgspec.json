@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj": {}
+    "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj": {}
   },
   "projects": {
-    "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj": {
+    "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
+        "projectUniqueName": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
         "projectName": "AguadeCactus.Api",
-        "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
+        "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj",
         "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\obj\\",
+        "outputPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
@@ -33,8 +33,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
-                "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
+              "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
+                "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
               }
             }
           }
@@ -93,14 +93,14 @@
         }
       }
     },
-    "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
+    "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
+        "projectUniqueName": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
         "projectName": "AguadeCactus.Core",
-        "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
+        "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj",
         "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\obj\\",
+        "outputPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
@@ -153,14 +153,14 @@
         }
       }
     },
-    "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj": {
+    "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
+        "projectUniqueName": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
         "projectName": "AguadeCactus.WebSite",
-        "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
+        "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
         "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-        "outputPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\obj\\",
+        "outputPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
@@ -182,11 +182,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj": {
-                "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj"
+              "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj": {
+                "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj"
               },
-              "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
-                "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
+              "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
+                "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
               }
             }
           }

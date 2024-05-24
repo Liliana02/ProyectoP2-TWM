@@ -6120,11 +6120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Tests\\AguadeCactus.Tests.csproj",
+      "projectUniqueName": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Tests\\AguadeCactus.Tests.csproj",
       "projectName": "AguadeCactus.Tests",
-      "projectPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Tests\\AguadeCactus.Tests.csproj",
+      "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Tests\\AguadeCactus.Tests.csproj",
       "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-      "outputPath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.Tests\\obj\\",
+      "outputPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
