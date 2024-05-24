@@ -11,4 +11,8 @@
       <ProjectReference Include="..\AguadeCactus.Core\AguadeCactus.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+
 </Project>

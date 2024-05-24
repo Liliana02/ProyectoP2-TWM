@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xqj5Z/m5IoQxFk5dVT0dpsEvZTcgkTAlgnK9NOnWFdU0CXVIZFnQcJD3OIT+zb7uLEDV4nd/k7aTkwdTTd2i4g==",
+  "dgSpecHash": "gPZb+3kpgWFWnhbYD6it5gLWJ9NSoSw5mBekVoKxmiV2S5G+GI6Ye6m3rXRMK5hECAFgZdHrhFhkCpV5nw+aYw==",
   "success": true,
   "projectFilePath": "C:\\Desarrollo web\\AguadeCactus\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\mysqlconnector\\2.3.5\\mysqlconnector.2.3.5.nupkg.sha512",
+    "C:\\Users\\Liliana Lozano\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\Liliana Lozano\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

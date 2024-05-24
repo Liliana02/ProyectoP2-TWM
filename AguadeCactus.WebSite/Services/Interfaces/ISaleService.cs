@@ -1,7 +1,7 @@
 ﻿using AguadeCactus.Api.Dto;
 using AguadeCactus.Core.Http;
 
-namespace AguadeCactus.WebSite.Services.Interfaces;
+namespace AguadeCactus.WebSite.Services;
 
 public interface ISaleService
 {
