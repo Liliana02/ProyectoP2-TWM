@@ -1,5 +1,7 @@
 ﻿@page
-@model AguadeCactus.WebSite.Pages.Sale.Add
+@model AguadeCactus.WebSite.Pages.Category.AddCategoryPayment
+
+
 
 <!DOCTYPE html>
 
@@ -9,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - AguadeCactus.WebSite</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/sale.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/category.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
 </head>
@@ -17,17 +19,13 @@
 <div>
     
     <div>
-        <h1 class="text-white">Ventas</h1>
-        <h2 class="text-white">Detalles</h2>
-
-        <div class="form-group col-md-4">
-            <label for="inputProduct">Producto</label>
-            <select id="inputProduct" class="form-control">
-                <option selected>Producto</option>
-                <option>...</option>
-                <option>...</option>
-            </select>
-        </div>
+        <h1 class="text-white">Categorias y pagos</h1>
+        <h2 class="text-white">Categorias</h2>
+        <input type="text" class="form-control" placeholder="Nombre">
+        <input type="text" class="form-control" placeholder="Descripcion">
+        <a href="" class="btn btn-light btn-lg btn-block">Agregar</a>
+        <a href="" class="btn btn-light btn-lg btn-block">Cancelar</a>
+        
         <div class="container">
             <div class="quantity-container">
                 <span class="quantity-label">Cantidad</span>
@@ -36,29 +34,17 @@
                 <button class="btn btn-sm" id="increment">+</button>
             </div>
         </div>
-        <input type="text" class="form-control" placeholder="Subtotal">
     </div>
     <div>
-        <h2 class="text-white">Venta</h2>
-        <div class="form-group col-md-4">
-            <label for="inputPaymentMethod">Método de pago</label>
-            <select id="inputPaymentMethod" class="form-control">
-                <option selected>Efectivo</option>
-                <option>Transferencia</option>
-                <option>Tarjeta</option>
-            </select>
-        </div>
-        <input type="text" class="form-control" placeholder="Total">
+        <h2 class="text-white">Pagos</h2>
+        <input type="text" class="form-control" placeholder="Nombre">
+        <input type="text" class="form-control" placeholder="Descripcion">
+        <a href="" class="btn btn-light btn-lg btn-block">Agregar</a>
+        <a href="" class="btn btn-light btn-lg btn-block">Cancelar</a>
+        
     </div>
 </div>
 <br/>
-<div>
-    <a href="" class="btn btn-light btn-lg btn-block">Finalizar</a>
-    <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
-    <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
-    <a href="" class="btn btn-light btn-lg btn-block">Cancelar</a>
-    
-</div>
 <script>
         document.addEventListener('DOMContentLoaded', function () {
             const decrementButton = document.getElementById('decrement');

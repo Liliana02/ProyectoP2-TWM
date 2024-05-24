@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AguadeCactus.WebSite.Pages.Sale;
+namespace AguadeCactus.WebSite.Pages.Category;
 
-public class List : PageModel
+public class AddCategoryPayment : PageModel
 {
     public void OnGet()
     {

@@ -1,5 +1,5 @@
 ﻿@page
-@model AguadeCactus.WebSite.Pages.Product.Add
+@model AguadeCactus.WebSite.Pages.Promotion.AddPromotion
 
 
 <!DOCTYPE html>
@@ -10,32 +10,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - AguadeCactus.WebSite</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/product.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/promotion.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
         
 </head>
 <body>
 <div>
-    <h1 class="text-white">Productos</h1>
+    <h1 class="text-white">Promociones</h1>
     <div>
-        <div class="form-group col-md-4">
-            <label for="inputCategory">Categoria</label>
-            <select id="inputCategory" class="form-control">
-                <option selected>Categoria...</option>
-                <option>...</option>
-                <option>...</option>
-            </select>
-        </div>
-        <br/>
         <input type="text" class="form-control" placeholder="Precio">
         <br/>
         <div class="form-group col-md-4">
-            <label for="inputSize">Tamaño</label>
-            <select id="inputSize" class="form-control">
-                <option selected>Chico</option>
-                <option>Mediano</option>
-                <option>Grande</option>
+            <label for="inputDuration">Duración</label>
+            <select id="inputDuration" class="form-control">
+                <option selected>Duración...</option>
+                <option>...</option>
+                <option>...</option>
             </select>
         </div>
         <div class="form-group">

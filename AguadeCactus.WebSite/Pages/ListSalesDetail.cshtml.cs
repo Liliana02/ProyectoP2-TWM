@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace AguadeCactus.WebSite.Pages.Product;
+namespace AguadeCactus.WebSite.Pages.Sale;
 
-public class Add : PageModel
+public class ListSalesDetail : PageModel
 {
     public void OnGet()
     {
