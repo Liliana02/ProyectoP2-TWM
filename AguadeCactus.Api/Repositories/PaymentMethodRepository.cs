@@ -52,10 +52,10 @@ public class PaymentMethodRepository : IPaymentMethodRepository
         return paymentMethod.IsDeleted == true ? null : paymentMethod;
     }
 
-    public async Task<Category> GetByName(string name, int id = 0)
+    public async Task<PaymentMethod> GetByName(string name, int id = 0)
     {
-        string sql = $"SELECT * FROM Category WHERE Name = '{name}' AND id <> {id}";
-        var paymentMethod = await _dbContext.Connection.QueryAsync<Category>(sql);
+        string sql = $"SELECT * FROM PaymentMethod WHERE Name = '{name}' AND id <> {id}";
+        var paymentMethod = await _dbContext.Connection.QueryAsync<PaymentMethod>(sql);
         return paymentMethod.ToList().FirstOrDefault();   
     }
 }

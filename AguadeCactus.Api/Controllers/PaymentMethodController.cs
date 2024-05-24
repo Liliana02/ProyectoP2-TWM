@@ -33,12 +33,14 @@ public class PaymentMethodController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<PaymentMethod>>> Post([FromBody] PaymentMethodDto paymentMethodDto)
     {
-        var response = new Response<PaymentMethodDto>
+        var response = new Response<PaymentMethodDto>();
+        if(await _paymentMethodService.ExistByName(paymentMethodDto.Name))
         {
-            Data = await _paymentMethodService.SaveAsync(paymentMethodDto)
-        };
-        
-        
+            response.Errors.Add($"PaymentMethod name {paymentMethodDto.Name} already exists");
+            return BadRequest(response);
+        }
+
+        response.Data = await _paymentMethodService.SaveAsync(paymentMethodDto);
         return Created($"/api/[controller]/{paymentMethodDto.id}", response);
     }
 
@@ -59,19 +61,23 @@ public class PaymentMethodController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut("{id:int}")]
-    public async Task<ActionResult<Response<PaymentMethodDto>>> Update(int id, [FromBody] 
-        PaymentMethodDto paymentMethodDto)
+    [HttpPut]
+    public async Task<ActionResult<Response<PaymentMethodDto>>> Update([FromBody] PaymentMethodDto paymentMethodDto)
     {
         var response = new Response<PaymentMethodDto>();
 
-        if (!await _paymentMethodService.PaymentMethodExist(id))
+        if (!await _paymentMethodService.PaymentMethodExist(paymentMethodDto.id))
         {
             response.Errors.Add("Payment Method not Found");
                 return NotFound(response);
         }
 
-        paymentMethodDto.id = id;
+        if (await _paymentMethodService.ExistByName(paymentMethodDto.Name, paymentMethodDto.id))
+        {
+            response.Errors.Add($"PaymentMethod Name {paymentMethodDto.Name} already exists");
+            return BadRequest(response);
+        }
+
         response.Data = await _paymentMethodService.UpdateAsync(paymentMethodDto);
         return Ok(response);
     }

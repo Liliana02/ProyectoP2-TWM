@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Desarrollo web\ProyectoP2-TWM\ProyectoP2-TWM\AguadeCactus.WebSite
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/AddCategoryPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ2F0ZWdvcnlQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/AddProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,10 +30,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/AddSalesDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkU2FsZXNEZXRhaWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Category/AddCategoryPayment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcQWRkQ2F0ZWdvcnlQYXltZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Category/Delete.cshtml]

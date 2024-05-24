@@ -26,9 +26,19 @@
             <span class="text-danger" asp-validation-for="CategoryDto.Name"></span>
             <input asp-for="CategoryDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
             <span class="text-danger" asp-validation-for="CategoryDto.Description"></span>
-            <button type="submit" class="btn btn-primary mr-3">Save</button>
-            <a href="" class="btn btn-light btn-lg btn-block">Cancelar</a>
+
         </div>
+        <div>
+            <input type="hidden"/>
+            <h2 class="text-white">Pagos</h2>
+            <input asp-for="PaymentMethodDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
+            <span class="text-danger" asp-validation-for="PaymentMethodDto.Name"></span>
+            <input asp-for="PaymentMethodDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
+            <span class="text-danger" asp-validation-for="PaymentMethodDto.Description"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mr-3">Save</button>
+        <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
+        
         @if (Model.Errors.Count > 0) 
         {
             <div class="alert alert-danger" role="alert">
@@ -37,13 +47,12 @@
                     {
                         <li>An error</li>
                     }
-                    </ul>
-                    </div>
+                </ul>
+            </div>
         }
         
     </form>
-    
-
 </div>
+
 </body>
 </html>
