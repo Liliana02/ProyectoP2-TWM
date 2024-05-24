@@ -40,16 +40,16 @@ public class CategoryService : ICategoryService
     public async Task<CategoryDto> UpdateAsync(CategoryDto categoryDto)
     {
         var category = await _categoryRepository.GetById(categoryDto.id);
-        
+
         if (category == null)
             throw new Exception("Category Not Found");
-        
+
         category.Name = categoryDto.Name;
         category.Description = categoryDto.Description;
         category.UpdatedBy = "";
         category.UpdatedDate = DateTime.Now;
         await _categoryRepository.UpdateAsync(category);
-        
+
         return categoryDto;
     }
 
@@ -71,8 +71,14 @@ public class CategoryService : ICategoryService
         var category = await _categoryRepository.GetById(id);
         if (category == null)
             throw new Exception("Category not Found");
-        
+
         var categoryDto = new CategoryDto(category);
         return categoryDto;
+    }
+
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var category = await _categoryRepository.GetByName(name, id);
+        return category != null;
     }
 }

@@ -77,4 +77,10 @@ public class PromotionService : IPromotionService
         var promotionDto = new PromotionDto(promotion);
         return promotionDto;
     }
+
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var promotion = await _promotionRepository.GetByName(name, id);
+        return promotion != null;
+    }
 }

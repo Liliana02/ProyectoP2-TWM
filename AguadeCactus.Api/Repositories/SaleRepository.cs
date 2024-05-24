@@ -51,4 +51,11 @@ public class SaleRepository : ISaleRepository
             return null;
         return sale.IsDeleted == true ? null : sale;
     }
+
+    public async Task<Sale> GetByName(string name, int id = 0)
+    {
+        string sql = $"SELECT * FROM Sale WHERE Name = '{name}' AND id <> {id}";
+        var sales = await _dbContext.Connection.QueryAsync<Sale>(sql);
+        return sales.ToList().FirstOrDefault();
+    }
 }

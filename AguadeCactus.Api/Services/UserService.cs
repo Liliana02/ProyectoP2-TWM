@@ -85,4 +85,10 @@ public class UserService : IUserService
         var userDto = new UserDto(user);
         return userDto;
     }
+
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var user = await _userRepository.GetByName(name, id);
+        return user != null;
+    }
 }

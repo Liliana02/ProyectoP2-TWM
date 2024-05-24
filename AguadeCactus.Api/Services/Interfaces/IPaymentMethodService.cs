@@ -20,4 +20,5 @@ public interface IPaymentMethodService
     
     //Metodo para obtener una categoria por id
     Task<PaymentMethodDto> GetById(int id);
+    Task<bool> ExistByName(string name, int id = 0);
 }

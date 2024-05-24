@@ -77,4 +77,10 @@ public class SaleDetailService : ISaleDetailService
         var saleDetailDto = new SaleDetailDto(saleDetail);
         return saleDetailDto;
     }
+
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var saleDetail = await _saleDetailRepository.GetByName(name, id);
+        return saleDetail != null;
+    }
 }

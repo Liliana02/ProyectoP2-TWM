@@ -83,7 +83,13 @@ public class ProductService : IProductService
         var productDto = new ProductDto(product);
         return productDto;
     }
-    
+
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var product = await _productRepository.GetByName(name, id);
+        return product != null;
+    }
+
     //Metodo category
     private async Task<CategoryDto> GetCategoryForProduct(int productId)
     {

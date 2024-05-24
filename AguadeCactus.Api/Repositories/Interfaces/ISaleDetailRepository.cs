@@ -18,4 +18,5 @@ public interface ISaleDetailRepository
     
     //Metodo para obtener una categoria por id
     Task<SaleDetail> GetById(int id);
+    Task<SaleDetail> GetByName(string name, int id = 0);
 }

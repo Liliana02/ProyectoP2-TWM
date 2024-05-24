@@ -59,5 +59,11 @@ public class ProductRepository : IProductRepository
         const string sql = "EXEC GetCategoryIdByProductId @ProductId";
         return await _dbContext.Connection.ExecuteScalarAsync<int>(sql, new { ProductId = productId });
     }
-   
+
+    public async Task<Product> GetByName(string name, int id = 0)
+    {
+        string sql = $"SELECT * FROM Product WHERE Name = '{name}' AND id <> {id}";
+        var products = await _dbContext.Connection.QueryAsync<Product>(sql);
+        return products.ToList().FirstOrDefault();
+    }
 }

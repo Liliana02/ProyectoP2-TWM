@@ -51,4 +51,11 @@ public class CategoryRepository : ICategoryRepository
             return null;
         return category.IsDeleted == true ? null : category;
     }
+
+    public async Task<Category> GetByName(string name, int id = 0)
+    {
+        string sql = $"SELECT * FROM Category WHERE Name = '{name}' AND id <> {id}";
+        var categories = await _dbContext.Connection.QueryAsync<Category>(sql);
+        return categories.ToList().FirstOrDefault();
+    }
 }

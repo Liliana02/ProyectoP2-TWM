@@ -18,4 +18,5 @@ public interface IUserRepository
     
     //Metodo para obtener una categoria por id
     Task<User> GetById(int id);
+    Task<User> GetByName(string name, int id = 0);
 }

@@ -51,4 +51,11 @@ public class UserRepository : IUserRepository
             return null;
         return user.IsDeleted == true ? null : user;
     }
+
+    public async Task<User> GetByName(string name, int id = 0)
+    {
+        string sql = $"SELECT * FROM User WHERE Name = '{name}' AND id <> {id}";
+        var users = await _dbContext.Connection.QueryAsync<User>(sql);
+        return users.ToList().FirstOrDefault();
+    }
 }

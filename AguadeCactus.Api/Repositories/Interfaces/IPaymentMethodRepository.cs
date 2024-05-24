@@ -18,4 +18,6 @@ public interface IPaymentMethodRepository
     
     //Metodo para obtener una categoria por id
     Task<PaymentMethod> GetById(int id);
+    //Metodo para obtener una categoria por nombre
+    Task<Category> GetByName(string name, int id = 0);
 }

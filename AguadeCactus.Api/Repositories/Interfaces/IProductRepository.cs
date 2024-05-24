@@ -21,4 +21,5 @@ public interface IProductRepository
     
     //Metodo para implementar categorias
     Task<int> GetCategoryIdByProductId(int productId);
+    Task<Product> GetByName(string name, int id = 0);
 }

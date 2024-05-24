@@ -18,4 +18,5 @@ public interface IPromotionRepository
     
     //Metodo para obtener una categoria por id
     Task<Promotion> GetById(int id);
+    Task<Promotion> GetByName(string name, int id = 0);
 }

@@ -51,4 +51,11 @@ public class PaymentMethodRepository : IPaymentMethodRepository
             return null;
         return paymentMethod.IsDeleted == true ? null : paymentMethod;
     }
+
+    public async Task<Category> GetByName(string name, int id = 0)
+    {
+        string sql = $"SELECT * FROM Category WHERE Name = '{name}' AND id <> {id}";
+        var paymentMethod = await _dbContext.Connection.QueryAsync<Category>(sql);
+        return paymentMethod.ToList().FirstOrDefault();   
+    }
 }

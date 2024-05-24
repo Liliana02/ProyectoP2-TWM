@@ -20,4 +20,5 @@ public interface IPromotionService
     
     //Metodo para obtener una categoria por id
     Task<PromotionDto> GetById(int id);
+    Task<bool> ExistByName(string name, int id = 0);
 }

@@ -75,4 +75,10 @@ public class PaymentMethodService : IPaymentMethodService
         var paymentMethodDto = new PaymentMethodDto(paymentMethod);
         return paymentMethodDto;
     }
+
+    public async Task<bool> ExistByName(string name, int id = 0)
+    {
+        var paymentMethod = await _paymentMethodRepository.GetByName(name, id);
+        return paymentMethod != null;
+    }
 }

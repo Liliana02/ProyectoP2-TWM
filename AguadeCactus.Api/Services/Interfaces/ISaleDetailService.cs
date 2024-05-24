@@ -20,4 +20,5 @@ public interface ISaleDetailService
     
     //Metodo para obtener una categoria por id
     Task<SaleDetailDto> GetById(int id);
+    Task<bool> ExistByName(string name, int id = 0);
 }

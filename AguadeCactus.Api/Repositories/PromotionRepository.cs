@@ -51,4 +51,11 @@ public class PromotionRepository : IPromotionRepository
             return null;
         return promotion.IsDeleted == true ? null : promotion;
     }
+
+    public async Task<Promotion> GetByName(string name, int id = 0)
+    {
+        string sql = $"SELECT * FROM Promotion WHERE Name = '{name}' AND id <> {id}";
+        var promotions = await _dbContext.Connection.QueryAsync<Promotion>(sql);
+        return promotions.ToList().FirstOrDefault();
+    }
 }
