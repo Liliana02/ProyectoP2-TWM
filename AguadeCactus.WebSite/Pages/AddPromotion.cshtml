@@ -17,30 +17,53 @@
 </head>
 <body>
 <div>
-    <h1 class="text-white">Promociones</h1>
-    <div>
-        <input type="text" class="form-control" placeholder="Precio">
-        <br/>
-        <div class="form-group col-md-4">
-            <label for="inputDuration">Duración</label>
-            <select id="inputDuration" class="form-control">
-                <option selected>Duración...</option>
-                <option>...</option>
-                <option>...</option>
-            </select>
+    <form method="post">
+        <h1 class="text-white">Promociones</h1>
+        <div>
+            <input type="hidden"/>
+            <input asp-for="PromotionDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
+            <span class="text-danger" asp-validation-for="PromotionDto.Name"></span>
+            <br/>
+            <div class="form-group col-md-4">
+                <label for="inputDuration">Duración</label>
+                <select asp-for="PromotionDto.Duration" id="inputDuration" class="form-control">
+                    <option selected>1 día</option>
+                    <option>2 días</option>
+                    <option>3 días</option>
+                    <option>1 semana</option>
+                    <option>2 semanas</option>
+                    <option>3 semanas</option>
+                    <option>1 mes</option>
+                </select>
+                <span class="text-danger" asp-validation-for="PromotionDto.Duration"></span>
+            </div>
+            <div class="form-group">
+                <label for="FormControlDescription"></label>
+                <textarea asp-for="PromotionDto.Description" class="form-control" id="FormControlDescription" rows="3" placeholder="Descripción", maxlength="45"></textarea>
+                <span class="text-danger" asp-validation-for="PromotionDto.Description"></span>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary mr-3">Save</button>
+            <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
+            <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
+            <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
+
         </div>
-        <div class="form-group">
-            <label for="FormControlDescription"></label>
-            <textarea class="form-control" id="FormControlDescription" rows="3" placeholder="Descripción"></textarea>
-        </div>
-        <br/>
-        <a href="" class="btn btn-light btn-lg btn-block">Agregar</a>
-        <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
-        <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
-        <a href="" class="btn btn-light btn-lg btn-block">Cancelar</a>
+        @if (Model.Errors.Count > 0) 
+            { 
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        @foreach (var error in Model.Errors)
+                        {
+                            <li>An error</li>
+                        }
+                    </ul>
+                    </div> 
+            }
         
-    </div>
+    </form>
     
+
 </div>
 </body>
 </html>

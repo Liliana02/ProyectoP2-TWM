@@ -33,12 +33,14 @@ public class PromotionController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<Promotion>>> Post([FromBody] PromotionDto promotionDto)
     {
-        var response = new Response<PromotionDto>
+        var response = new Response<PromotionDto>();
+        if (await _promotionService.ExistByName(promotionDto.Name))
         {
-            Data = await _promotionService.SaveAsync(promotionDto)
-        };
-        
-        
+            response.Errors.Add($"Promotion name {promotionDto.Name} already exists");
+            return BadRequest(response);
+        }
+
+        response.Data = await _promotionService.SaveAsync(promotionDto);
         return Created($"/api/[controller]/{promotionDto.id}", response);
     }
 
@@ -59,18 +61,22 @@ public class PromotionController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut ("{id:int}")]
-    public async Task<ActionResult<Response<PromotionDto>>> Update(int id, [FromBody] PromotionDto promotionDto)
+    [HttpPut]
+    public async Task<ActionResult<Response<PromotionDto>>> Update([FromBody] PromotionDto promotionDto)
     {
         var response = new Response<PromotionDto>();
 
-        if (!await _promotionService.PromotionExist(id))
+        if (!await _promotionService.PromotionExist(promotionDto.id))
         {
             response.Errors.Add("Promotion not Found");
                 return NotFound(response);
         }
 
-        promotionDto.id = id;
+        if (await _promotionService.ExistByName(promotionDto.Name, promotionDto.id))
+        {
+            response.Errors.Add($"Promotion Name {promotionDto.Name} already exists");
+            return BadRequest(response);
+        }
         response.Data = await _promotionService.UpdateAsync(promotionDto);
         return Ok(response);
     }
