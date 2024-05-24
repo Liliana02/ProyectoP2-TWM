@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\Liliana Lozano\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files\DevExpress 22.2\Components\Offline Packages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">C:\Users\Liliana Lozano\.nuget\packages\microsoft.extensions.apidescription.server\6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+  </PropertyGroup>
 </Project>
