@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Dapper.Contrib.Extensions;
 using AguadeCactus.Api.DataAccess.Interfaces;
-using AguadeCactus.Api.Dto;
 using AguadeCactus.Api.Repositories.Interfaces;
 using AguadeCactus.Core.Entities;
 
@@ -51,13 +50,6 @@ public class ProductRepository : IProductRepository
         if (product == null)
             return null;
         return product.IsDeleted == true ? null : product;
-    }
-    
-    //Implementación categorias
-    public async Task<int> GetCategoryIdByProductId(int productId)
-    {
-        const string sql = "EXEC GetCategoryIdByProductId @ProductId";
-        return await _dbContext.Connection.ExecuteScalarAsync<int>(sql, new { ProductId = productId });
     }
 
     public async Task<Product> GetByName(string name, int id = 0)

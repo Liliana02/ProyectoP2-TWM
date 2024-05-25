@@ -8,12 +8,10 @@ namespace AguadeCactus.Api.Services;
 public class ProductService : IProductService
 {
     private readonly IProductRepository _productRepository;
-    private readonly ICategoryRepository _categoryRepository;
 
-    public ProductService(IProductRepository productRepository, ICategoryRepository categoryRepository)
+    public ProductService(IProductRepository productRepository)
     {
         _productRepository = productRepository;
-        _categoryRepository = categoryRepository;
     }
 
     public async Task<bool> ProductExist(int id)
@@ -89,21 +87,4 @@ public class ProductService : IProductService
         var product = await _productRepository.GetByName(name, id);
         return product != null;
     }
-
-    //Metodo category
-    private async Task<CategoryDto> GetCategoryForProduct(int productId)
-    {
-        int categoryId = await _productRepository.GetCategoryIdByProductId(productId);
-        var category = await _categoryRepository.GetById(categoryId);
-        
-        var categoryDto = new CategoryDto
-        {
-            id = category.id,
-            Name = category.Name,
-            Description = category.Description
-        };
-
-        return categoryDto;
-    }
-    
 }

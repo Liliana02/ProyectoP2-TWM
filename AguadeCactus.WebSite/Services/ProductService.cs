@@ -7,7 +7,7 @@ namespace AguadeCactus.WebSite.Services;
 public class ProductService : IProductService
 {
     private readonly string _baseURL = "http://localhost:5080/";
-    private readonly string _endpoint = "";
+    private readonly string _endpoint = "api/product";
 
     public ProductService()
     {
@@ -78,4 +78,5 @@ public class ProductService : IProductService
         
         return response;
     }
+    
 }

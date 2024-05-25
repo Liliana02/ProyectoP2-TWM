@@ -33,12 +33,14 @@ public class ProductController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Response<Product>>> Post([FromBody] ProductDto productDto)
     {
-        var response = new Response<ProductDto>
+        var response = new Response<ProductDto>();
+        if (await _productService.ExistByName(productDto.Name))
         {
-            Data = await _productService.SaveAsync(productDto)
-        };
-        
-        
+            response.Errors.Add($"Product name {productDto.Name} already exists");
+            return BadRequest(response);
+        }
+
+        response.Data = await _productService.SaveAsync(productDto);
         return Created($"/api/[controller]/{productDto.id}", response);
     }
 
@@ -59,18 +61,22 @@ public class ProductController : ControllerBase
         return Ok(response);
     }
 
-    [HttpPut("{id:int}")]
-    public async Task<ActionResult<Response<ProductDto>>> Update(int id, [FromBody] ProductDto productDto)
+    [HttpPut]
+    public async Task<ActionResult<Response<ProductDto>>> Update([FromBody] ProductDto productDto)
     {
         var response = new Response<ProductDto>();
 
-        if (!await _productService.ProductExist(id))
+        if (!await _productService.ProductExist(productDto.id))
         {
             response.Errors.Add("Product not Found");
                 return NotFound(response);
         }
 
-        productDto.id = id;
+        if (await _productService.ExistByName(productDto.Name, productDto.id))
+        {
+            response.Errors.Add($"Product Name {productDto.Name} already exists");
+            return BadRequest(response);
+        }
         response.Data = await _productService.UpdateAsync(productDto);
         return Ok(response);
     }

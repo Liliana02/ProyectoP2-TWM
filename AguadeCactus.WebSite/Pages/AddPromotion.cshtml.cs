@@ -4,7 +4,7 @@ using AguadeCactus.Api.Dto;
 using AguadeCactus.Core.Http;
 using AguadeCactus.WebSite.Services;
 
-namespace AguadeCactus.WebSite.Pages.Promotion;
+namespace AguadeCactus.WebSite.Pages;
 
 public class AddPromotion : PageModel
 {

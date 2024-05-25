@@ -77,7 +77,7 @@ public class AddCategoryPayment : PageModel
         }
 
         Errors = responseC.Errors;
-        Errors = responseC.Errors;
+        Errors = responseP.Errors;
         if (Errors.Count > 0)
         {
             return Page();
