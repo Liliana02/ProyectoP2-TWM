@@ -7,7 +7,7 @@ namespace AguadeCactus.WebSite.Services;
 public class SaleService : ISaleService
 {
     private readonly string _baseURL = "http://localhost:5080/";
-    private readonly string _endpoint = "";
+    private readonly string _endpoint = "api/sale";
 
     public SaleService()
     {

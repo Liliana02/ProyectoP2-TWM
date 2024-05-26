@@ -12,12 +12,20 @@
     <link rel="stylesheet" href="~/css/sale.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
+    <!-- Estilos de jQuery UI -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+        <!-- Librería de jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
 </head>
 <body>
 <div>
     
     <div>
         <h1 class="text-white">Ventas</h1>
+        
+        <!--Espacio de detalles de venta-->
         <h2 class="text-white">Detalles</h2>
 
         <div class="form-group col-md-4">
@@ -28,6 +36,7 @@
                 <option>...</option>
             </select>
         </div>
+        
         <div class="container">
             <div class="quantity-container">
                 <span class="quantity-label">Cantidad</span>
@@ -39,6 +48,7 @@
         <input type="text" class="form-control" placeholder="Subtotal">
     </div>
     <div>
+        <!--Espacio para ventas-->
         <h2 class="text-white">Venta</h2>
         <div class="form-group col-md-4">
             <label for="inputPaymentMethod">Método de pago</label>
@@ -49,6 +59,27 @@
             </select>
         </div>
         <input type="text" class="form-control" placeholder="Total">
+        <div class="form-group">
+            <label for="Birthdate">BirthDate:</label>
+            <input id="Birthdate" class="form-control" type="date" asp-for="SaleDto.Date" required/>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputUser">Usuario</label>
+            <select id="inputUser" class="form-control">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputSaleDetail">Detalle de venta</label>
+            <select id="inputSaleDetail" class="form-control">
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+        
     </div>
 </div>
 <br/>
@@ -60,23 +91,21 @@
     
 </div>
 <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const decrementButton = document.getElementById('decrement');
-            const incrementButton = document.getElementById('increment');
-            const quantityInput = document.getElementById('quantity');
-
-            decrementButton.addEventListener('click', function () {
-                let currentValue = parseInt(quantityInput.value);
-                if (currentValue > 1) {
-                    quantityInput.value = currentValue - 1;
-                }
+        $(document).ready(function () {
+                $('#decrement').click(function () {
+                    let currentValue = parseInt($('#quantity').val());
+                    if (currentValue > 1) {
+                        $('#quantity').val(currentValue - 1);
+                    }
+                });
+        
+                $('#increment').click(function () {
+                    let currentValue = parseInt($('#quantity').val());
+                    $('#quantity').val(currentValue + 1);
+                });
             });
-
-            incrementButton.addEventListener('click', function () {
-                let currentValue = parseInt(quantityInput.value);
-                quantityInput.value = currentValue + 1;
-            });
-        });
     </script>
+
+
 </body>
 </html>
