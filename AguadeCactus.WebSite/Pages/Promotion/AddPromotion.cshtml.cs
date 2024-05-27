@@ -11,14 +11,16 @@ public class AddPromotion : PageModel
     [BindProperty] public PromotionDto PromotionDto { get; set; }
 
     public List<string> Errors { get; set; } = new List<string>();
+    public List<PromotionDto> Promotions { get; set; }
     
     private readonly IPromotionService _service;
 
     public AddPromotion(IPromotionService service)
     {
+        Promotions = new List<PromotionDto>();
         _service = service;
     }
-    public async Task<IActionResult> OnGet(int? id)
+    public async Task<IActionResult> OnGetId(int? id)
     {
         PromotionDto = new PromotionDto();
 
@@ -33,6 +35,14 @@ public class AddPromotion : PageModel
             return Redirect("/Error");
         }
 
+
+        return Page();
+    }
+
+    public async Task<IActionResult> OnGet()
+    {
+        var response = await _service.GetAllAsync();
+        Promotions = response.Data;
 
         return Page();
     }

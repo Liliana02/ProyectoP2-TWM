@@ -20,10 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkQ2F0ZWdvcnlQYXltZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/AddPromotion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkUHJvbW90aW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/AddSalesDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkU2FsZXNEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -88,16 +84,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Promotion/AddPromotion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvbW90aW9uXEFkZFByb21vdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Promotion/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvbW90aW9uXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Promotion/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvbW90aW9uXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Promotion/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvbW90aW9uXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/SaleDetail/Add.cshtml]

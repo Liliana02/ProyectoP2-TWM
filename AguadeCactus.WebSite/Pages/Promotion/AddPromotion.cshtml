@@ -62,6 +62,38 @@
             }
         
     </form>
+    <form method="get">
+            
+            
+        </form>
+        <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-10">
+                            <table class="table">
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Duración</th>
+                                    <th>Descripción</th>
+                                    <th></th>
+                                </tr>
+                                @foreach (var promotion in @Model.Promotions)
+                                {
+                                    <tr>
+                                        <td>@promotion.Name</td>
+                                        <td>@promotion.Duration</td>
+                                        <td>@promotion.Description</td>
+                                        <td>
+                                            <a a-asp-area="" asp-page="/Promotion/Edit" asp-route-id="@promotion.id"
+                                               class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                                            <br/>
+                                            <a a-asp-area="" asp-page="/Promotion/Delete" asp-route-id="@promotion.id"
+                                               class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    </div>
     
 
 </div>
