@@ -1,8 +1,6 @@
 ﻿@page
 @model AguadeCactus.WebSite.Pages.Category.AddCategoryPayment
 
-
-
 <!DOCTYPE html>
 
 <html>
@@ -16,43 +14,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
 </head>
 <body>
-<div>
+<div class="container mt-5">
+    <h1 class="text-white">Categorias y pagos</h1>
     <form method="post">
-        <div>
-            <input type="hidden"/>
-            <h1 class="text-white">Categorias y pagos</h1>
-            <h2 class="text-white">Categorias</h2>
-            <input asp-for="CategoryDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
-            <span class="text-danger" asp-validation-for="CategoryDto.Name"></span>
-            <input asp-for="CategoryDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
-            <span class="text-danger" asp-validation-for="CategoryDto.Description"></span>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-white">Categorias</h2>
+                <div class="form-group">
+                    <label asp-for="CategoryDto.Name" class="text-white">Nombre</label>
+                    <input asp-for="CategoryDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
+                    <span class="text-danger" asp-validation-for="CategoryDto.Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CategoryDto.Description" class="text-white">Descripción</label>
+                    <input asp-for="CategoryDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
+                    <span class="text-danger" asp-validation-for="CategoryDto.Description"></span>
+                </div>
 
-        </div>
-        <div>
-            <input type="hidden"/>
-            <h2 class="text-white">Pagos</h2>
-            <input asp-for="PaymentMethodDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
-            <span class="text-danger" asp-validation-for="PaymentMethodDto.Name"></span>
-            <input asp-for="PaymentMethodDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
-            <span class="text-danger" asp-validation-for="PaymentMethodDto.Description"></span>
-        </div>
-        <button type="submit" class="btn btn-primary mr-3">Save</button>
-        <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
-        
-        @if (Model.Errors.Count > 0) 
-        {
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                    @foreach (var error in Model.Errors)
-                    {
-                        <li>An error</li>
-                    }
-                </ul>
+                <h2 class="text-white">Pagos</h2>
+                <div class="form-group">
+                    <label asp-for="PaymentMethodDto.Name" class="text-white">Nombre</label>
+                    <input asp-for="PaymentMethodDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
+                    <span class="text-danger" asp-validation-for="PaymentMethodDto.Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PaymentMethodDto.Description" class="text-white">Descripción</label>
+                    <input asp-for="PaymentMethodDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
+                    <span class="text-danger" asp-validation-for="PaymentMethodDto.Description"></span>
+                </div>
+
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                            @foreach (var error in Model.Errors)
+                            {
+                                <li>@error</li>
+                            }
+                        </ul>
+                    </div>
+                }
             </div>
-        }
-        
+
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <button type="submit" class="btn btn-light btn-lg btn-block mb-2">Agregar</button>
+                <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
+            </div>
+        </div>
     </form>
 </div>
 
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

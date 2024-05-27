@@ -15,6 +15,8 @@ public class AddCategoryPayment : PageModel
     
     private readonly ICategoryService _serviceC;
     private readonly IPaymentMethodService _serviceP;
+    
+
 
     public AddCategoryPayment(ICategoryService serviceC, IPaymentMethodService serviceP)
     {
@@ -45,6 +47,8 @@ public class AddCategoryPayment : PageModel
 
         return Page();
     }
+    
+    
 
     public async Task<IActionResult> OnPostAsync()
     {
