@@ -80,8 +80,8 @@
                         <div class="form-group col-md-4">
                             <label for="inputGender">Género</label>
                             <select asp-for="UserDto.Gender" id="inputGender" class="form-control" maxlength="45">
-                                <option selected>Mujer</option>
-                                <option>Hombre</option>
+                                <option selected>Femenino</option>
+                                <option>Masculino</option>
                                 <option>No binario</option>
                             </select>
                             <span class="text-danger" asp-validation-for="UserDto.Gender"></span>
@@ -99,6 +99,45 @@
                     </div>
                 </div>
             </form>
+            <form method="get">
+                    
+                    
+                </form>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-10">
+                    <table class="table">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Nombre de usuario</th>
+                            <th>Rol</th>
+                            <th>Género</th>
+                            <th>Edad</th>
+                            <th></th>
+                        </tr>
+                        @foreach (var user in @Model.Users)
+                        {
+                            <tr>
+                                <td>@user.Name</td>
+                                <td>@user.LastName</td>
+                                <td>@user.UserName</td>
+                                <td>@user.Rol</td>
+                                <td>@user.Gender</td>
+                                <td>@user.Age</td>
+                                <td>
+                                    <a a-asp-area="" asp-page="/User/EditV" asp-route-id="@user.id"
+                                       class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                                    <br/>
+                                    <a a-asp-area="" asp-page="/User/Delete" asp-route-id="@user.id"
+                                       class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+            
         </div>
     </main>
 </div>

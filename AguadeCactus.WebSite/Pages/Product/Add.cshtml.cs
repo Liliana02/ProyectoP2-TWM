@@ -37,7 +37,6 @@ public class Add : PageModel
         {
             return Redirect("/Error");
         }
-        
 
         return Page();
     }
@@ -50,8 +49,6 @@ public class Add : PageModel
         return Page();
     }
     
-
-
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)
@@ -79,7 +76,6 @@ public class Add : PageModel
         }
 
         ProductDto = responseP.Data;
-
         return RedirectToPage("./AddCategoryPayment");
     }
 }

@@ -1,0 +1,118 @@
+﻿@page "{id:int}"
+@model AguadeCactus.WebSite.Pages.User.EditV
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AguadeCactus.WebSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/userA.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h2>Editing</h2>
+            <form method="post">
+                
+                <input type="hidden" asp-for="UserDto.id"/>
+                <div class="form-group">
+                    <label asp-for="UserDto.Name"></label>
+                    <input asp-for="UserDto.Name" class="form-control" maxlength="45"/>
+                    <span class="text-danger" asp-validation-for="UserDto.Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserDto.LastName"></label>
+                    <input asp-for="UserDto.LastName" class="form-control" maxlength="45"/>
+                    <span class="text-danger" asp-validation-for="UserDto.LastName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserDto.UserName"></label>
+                    <input asp-for="UserDto.UserName" class="form-control" maxlength="45"/>
+                    <span class="text-danger" asp-validation-for="UserDto.UserName"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserDto.Password"></label>
+                    <input asp-for="UserDto.Password" class="form-control" maxlength="45"/>
+                    <span class="text-danger" asp-validation-for="UserDto.Password"></span>
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label for="inputRol">Rol</label>
+                    <select asp-for="UserDto.Rol" id="inputSize" class="form-control">
+                        <option selected>Administrador</option>
+                        <option>Empleado</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="UserDto.Rol"></span>
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label for="inputGender">Genero</label>
+                    <select asp-for="UserDto.Gender" id="inputGender" class="form-control">
+                        <option selected>Femenino</option>
+                        <option>Masculino</option>
+                        <option>No binario</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="UserDto.Gender"></span>
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label for="inputAge">Edad</label>
+                    <select asp-for="UserDto.Age" id="inputAge" class="form-control">
+                        <option selected>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                        <option>32</option>
+                        <option>33</option>
+                        <option>34</option>
+                        <option>35</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="UserDto.Age"></span>
+                </div>
+                
+                
+                
+                @if (Model.Errors.Count > 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        <ul>
+                            @foreach (var error in Model.Errors)
+                            {
+                                <li>An error</li>
+                            }
+                        </ul>
+                    </div>
+                }
+
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button type="submit" class="btn btn-primary mr-3">Save</button>
+                        <a class="btn btn-secondary">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-md-1"></div>
+    </div>
+</div>
+</body>
+</html>

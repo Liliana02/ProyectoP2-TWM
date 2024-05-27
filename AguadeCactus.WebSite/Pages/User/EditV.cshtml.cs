@@ -6,46 +6,38 @@ using AguadeCactus.WebSite.Services;
 
 namespace AguadeCactus.WebSite.Pages.User;
 
-public class Edit : PageModel
+public class EditV : PageModel
 {
     [BindProperty] public UserDto UserDto { get; set; }
 
     public List<string> Errors { get; set; } = new List<string>();
-    public List<UserDto> Users { get; set; }
-    
+
     private readonly IUserService _service;
 
-    public Edit(IUserService service)
+    public EditV(IUserService service)
     {
-        Users = new List<UserDto>();
         _service = service;
     }
-    public async Task<IActionResult> OnGetId(int? id)
+
+    public async Task<IActionResult> OnGet(int? id)
     {
         UserDto = new UserDto();
 
         if (id.HasValue)
         {
+            //Obtener informacion del servicio API
             var response = await _service.GetById(id.Value);
             UserDto = response.Data;
         }
 
         if (UserDto == null)
         {
-            return Redirect("/Error");
+            return RedirectToPage("/Error");
         }
 
         return Page();
     }
-
-    public async Task<IActionResult> OnGet()
-    {
-        var response = await _service.GetAllAsync();
-        Users = response.Data;
-
-        return Page();
-    }
-
+    
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

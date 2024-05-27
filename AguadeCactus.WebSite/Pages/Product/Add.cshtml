@@ -81,37 +81,38 @@
         
     </form>
     <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-10">
-                        <table class="table">
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Precio</th>
-                                <th>Tamaño</th>
-                                <th>Categoria</th>
-                                <th>Descripcion</th>
-                                <th></th>
-                            </tr>
-                            @foreach (var product in @Model.Products)
-                            {
-                                <tr>
-                                    <td>@product.Name</td>
-                                    <td>@product.Price</td>
-                                    <td>@product.Size</td>
-                                    <td>@product.IdCategory</td>
-                                    <td>@product.Description</td>
-                                    <td>
-                                        <a a-asp-area="" asp-page="/Product/Edit" asp-route-id="@product.id"
-                                           class="btn btn-light btn-lg btn-block" role="button">Edit</a>
-                                        <br/>
-                                        <a a-asp-area="" asp-page="/Product/Delete" asp-route-id="@product.id"
-                                           class="btn btn-light btn-lg btn-block" role="button">Delete</a>
-                                    </td>
-                                </tr>
-                            }
-                        </table>
-                    </div>
-                </div>
+        <div class="col-md-1"></div>
+        <div class="col-10">
+            <table class="table">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Tamaño</th>
+                    <th>Categoria</th>
+                    <th>Descripcion</th>
+                    <th></th>
+                </tr>
+                @foreach (var product in @Model.Products)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td>@product.Size</td>
+                        <td>@product.IdCategory</td>
+                        <td>@product.Description</td>
+                        <td>
+                            <a a-asp-area="" asp-page="/Product/Edit" asp-route-id="@product.id"
+                               class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                            <br/>
+                            <a a-asp-area="" asp-page="/Product/Delete" asp-route-id="@product.id"
+                               class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    
 
 </div>
 </body>
