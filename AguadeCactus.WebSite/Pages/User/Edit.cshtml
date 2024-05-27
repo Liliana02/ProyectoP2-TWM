@@ -17,7 +17,6 @@
 <div class="container center-content-container">
     <main role="main" class="pb-3">
         <div class="center-image-text">
-            
             <form method="post">
                 <input type="hidden"/>
                 <div>
@@ -40,18 +39,22 @@
                     <h8 class="text-white">La casa del frappé desde 2019</h8>
                     <br/>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Usuario">
+                        <input asp-for="UserDto.UserName" type="text" class="form-control" placeholder="Usuario" maxlength="45">
+                        <span class="text-danger" asp-validation-for="UserDto.UserName"></span>
                         <br/>
-                        <input type="text" class="form-control" placeholder="Nombre(s)">
+                        <input asp-for="UserDto.Name" type="text" class="form-control" placeholder="Nombre(s)" maxlength="45">
+                        <span class="text-danger" asp-validation-for="UserDto.Name"></span>
                         <br/>
-                        <input type="text" class="form-control" placeholder="Apellidos">
+                        <input asp-for="UserDto.LastName" type="text" class="form-control" placeholder="Apellidos" maxlength="45">
+                        <span class="text-danger" asp-validation-for="UserDto.LastName"></span>
                         <br/>
-                        <input type="text" class="form-control" placeholder="Contraseña">
+                        <input asp-for="UserDto.Password" type="text" class="form-control" placeholder="Contraseña" maxlength="45">
+                        <span class="text-danger" asp-validation-for="UserDto.Password"></span>
                     </div>
                     <div class="col">
                         <div class="form-group col-md-4">
                             <label for="inputAge">Edad</label>
-                            <select id="inputAge" class="form-control">
+                            <select asp-for="UserDto.Age" id="inputAge" class="form-control">
                                 <option selected>18</option>
                                 <option>19</option>
                                 <option>20</option>
@@ -71,23 +74,26 @@
                                 <option>34</option>
                                 <option>35</option>
                             </select>
+                            <span class="text-danger" asp-validation-for="UserDto.Age"></span>
                         </div>
                         <br/>
                         <div class="form-group col-md-4">
                             <label for="inputGender">Género</label>
-                            <select id="inputGender" class="form-control">
+                            <select asp-for="UserDto.Gender" id="inputGender" class="form-control" maxlength="45">
                                 <option selected>Mujer</option>
                                 <option>Hombre</option>
                                 <option>No binario</option>
                             </select>
+                            <span class="text-danger" asp-validation-for="UserDto.Gender"></span>
                         </div>
                         <br/>
                         <div class="form-group col-md-4">
                             <label for="inputRol">Rol</label>
-                            <select id="inputRol" class="form-control">
+                            <select asp-for="UserDto.Rol" id="inputRol" class="form-control" maxlength="45">
                                 <option selected>Administrador</option>
                                 <option>Empleado</option>
                             </select>
+                            <span class="text-danger" asp-validation-for="UserDto.Rol"></span>
                         </div>
 
                     </div>
