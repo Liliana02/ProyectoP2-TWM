@@ -17,21 +17,24 @@
 <div class="container center-content-container">
     <main role="main" class="pb-3">
         <div class="center-image-text">
-            <div>
-                <img src="~/cactus.png" alt="Cactus bebe" class="cactus-image">
-                <br/>
-                <a href="" class="btn btn-light btn-lg btn-block">Guardar</a>
-                <br/>
-                <br/>
-                <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
-                <br/>
-                <br/>
-                <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
-                <br/>
-                <br/>
-                <a href="~/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
-            </div>
-            <form>
+            
+            <form method="post">
+                <input type="hidden"/>
+                <div>
+                    <img src="~/cactus.png" alt="Cactus bebe" class="cactus-image">
+                    <br/>
+                    <button type="submit" class="btn btn-primary mr-3">Save</button>
+                    <br/>
+                    <br/>
+                    <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
+                    <br/>
+                    <br/>
+                    <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
+                    <br/>
+                    <br/>
+                    <a href="~/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
+                </div>
+                
                 <div class="row">
                     <h1 class="text-white">Agua de Cactus</h1>
                     <h8 class="text-white">La casa del frappé desde 2019</h8>
@@ -86,7 +89,7 @@
                                 <option>Empleado</option>
                             </select>
                         </div>
-                        
+
                     </div>
                 </div>
             </form>

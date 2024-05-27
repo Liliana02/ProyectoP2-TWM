@@ -5,6 +5,7 @@ namespace AguadeCactus.Api.Dto;
 
 public class PaymentMethodDto : DtoBase
 {
+    public int id { get; set; }
     [Required (ErrorMessage = "Este campo es obligatorio.")]
     [StringLength(45, ErrorMessage = "Haz exedido la cantidad de carácteres permitidos.")]
     //[RegularExpression("^(Efectivo|Transferencia|Tarjeta)$", 

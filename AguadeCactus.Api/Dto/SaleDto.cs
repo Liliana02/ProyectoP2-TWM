@@ -5,6 +5,7 @@ namespace AguadeCactus.Api.Dto;
 
 public class SaleDto : DtoBase
 {
+    public int id { get; set; }
     [Required (ErrorMessage = "Este campo es obligatorio.")]
     [DataType(DataType.DateTime)]
     [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-ddTHH:mm}")]

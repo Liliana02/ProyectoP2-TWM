@@ -6,6 +6,7 @@ namespace AguadeCactus.Api.Dto;
 
 public class CategoryDto : DtoBase
 {
+    public int id { get; set; }
     [Required (ErrorMessage = "Este campo es obligatorio.")]
     [StringLength(45, ErrorMessage = "Haz exedido la cantidad de carácteres permitidos.")]
    // [RegularExpression("^(Frappés|Cafés|Smoothies|Crepas|Waffles)$", 

@@ -5,6 +5,7 @@ namespace AguadeCactus.Api.Dto;
 
 public class SaleDetailDto : DtoBase
 {
+    public int id { get; set; }
     [Required (ErrorMessage = "Este campo es obligatorio.")]
     [Range(0, 100, ErrorMessage = "Ingresa una cantidad.")]
     public int Quantity { get; set; }

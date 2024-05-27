@@ -1,6 +1,16 @@
 using AguadeCactus.WebSite.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5258);
+    options.ListenAnyIP(7233, listenOptions =>
+    {
+        listenOptions.UseHttps();
+    });
+});
 
 // Add services to the container.
 builder.Services.AddRazorPages();
