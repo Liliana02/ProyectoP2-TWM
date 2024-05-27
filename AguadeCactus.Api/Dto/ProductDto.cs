@@ -5,6 +5,7 @@ namespace AguadeCactus.Api.Dto;
 
 public class ProductDto : DtoBase
 {
+    public int id { get; set; }
     [Required (ErrorMessage = "Este campo es obligatorio.")]
     [StringLength(45, ErrorMessage = "Haz exedido la cantidad de carácteres permitidos.")]
     public string Name { get; set; }

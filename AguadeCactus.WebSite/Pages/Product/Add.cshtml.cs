@@ -6,21 +6,23 @@ using AguadeCactus.WebSite.Services;
 
 namespace AguadeCactus.WebSite.Pages;
 
-public class AddProduct : PageModel
+public class Add : PageModel
 {
     [BindProperty] public ProductDto ProductDto { get; set; }
 
     public List<string> Errors { get; set; } = new List<string>();
+    public List<ProductDto> Products { get; set; }
 
     private readonly IProductService _serviceP;
 
 
-    public AddProduct(IProductService serviceP)
+    public Add(IProductService serviceP)
     {
+        Products = new List<ProductDto>();
         _serviceP = serviceP;
     }
 
-    public async Task<IActionResult> OnGet(int? id)
+    public async Task<IActionResult> OnGetId(int? id)
     {
         ProductDto = new ProductDto();
         
@@ -39,6 +41,16 @@ public class AddProduct : PageModel
 
         return Page();
     }
+
+    public async Task<IActionResult> OnGet()
+    {
+        var responseP = await _serviceP.GetAllAsync();
+        Products = responseP.Data;
+
+        return Page();
+    }
+    
+
 
     public async Task<IActionResult> OnPostAsync()
     {

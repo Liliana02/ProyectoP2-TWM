@@ -1,5 +1,5 @@
 ﻿@page
-@model AguadeCactus.WebSite.Pages.AddProduct
+@model AguadeCactus.WebSite.Pages.Add
 
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
         <div>
             <input type="hidden"/>
             <input asp-for="ProductDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
-                        <span class="text-danger" asp-validation-for="ProductDto.Name"></span>
+            <span class="text-danger" asp-validation-for="ProductDto.Name"></span>
                         
             <br/>
             
@@ -31,7 +31,7 @@
             
             <br/>
             <div class="form-group col-md-4">
-                <label for="inputDuration">Tamaño</label>
+                <label for="inputSize">Tamaño</label>
                 <select asp-for="ProductDto.Size" id="inputSize" class="form-control">
                     <option selected>Chico</option>
                     <option>Mediano</option>
@@ -59,26 +59,59 @@
                 <span class="text-danger" asp-validation-for="ProductDto.Description"></span>
             </div>
             <br/>
-            <button type="submit" class="btn btn-primary mr-3">Save</button>
-            <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
-            <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
+            <button type="submit" class="btn btn-light btn-lg btn-block">Save</button>
             <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
 
         </div>
         @if (Model.Errors.Count > 0) 
-            { 
-                <div class="alert alert-danger" role="alert">
-                    <ul>
-                        @foreach (var error in Model.Errors)
-                        {
-                            <li>An error</li>
-                        }
-                    </ul>
-                    </div> 
-            }
+        { 
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    @foreach (var error in Model.Errors)
+                    {
+                        <li>An error</li>
+                    }
+                </ul>
+            </div> 
+        }
         
     </form>
-    
+    <form method="get">
+        
+        
+    </form>
+    <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-10">
+                        <table class="table">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Tamaño</th>
+                                <th>Categoria</th>
+                                <th>Descripcion</th>
+                                <th></th>
+                            </tr>
+                            @foreach (var product in @Model.Products)
+                            {
+                                <tr>
+                                    <td>@product.Name</td>
+                                    <td>@product.Price</td>
+                                    <td>@product.Size</td>
+                                    <td>@product.IdCategory</td>
+                                    <td>@product.Description</td>
+                                    <td>
+                                        <a a-asp-area="" asp-page="/Product/Edit" asp-route-id="@product.id"
+                                           class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                                        <br/>
+                                        <a a-asp-area="" asp-page="/Product/Delete" asp-route-id="@product.id"
+                                           class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
 
 </div>
 </body>
