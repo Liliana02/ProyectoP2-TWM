@@ -20,7 +20,7 @@
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-            <h2>Editing</h2>
+            <h2>Borrar Promoción</h2>
             <form method="post">
                 
                 <input type="hidden" asp-for="PromotionDto.id"/>
@@ -31,7 +31,7 @@
                 </div>
                 
                 
-                <div class="form-group col-md-4">
+                <div class="form-group">
                     <label for="inputDuration">Duración</label>
                     <select asp-for="PromotionDto.Duration" id="inputDuration" class="form-control">
                         <option selected>1 día</option>
@@ -67,10 +67,12 @@
                     </div>
                 }
 
+                <br/>
                 <div class="row">
                     <div class="col-md-12 text-right">
-                        <button type="submit" class="btn btn-primary mr-3">Save</button>
-                        <a class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-light btn-lg btn-block mb-2">Borrar</button>
+                        <a href="/Promotion/AddPromotion" class="btn btn-light btn-lg btn-block mb-2">Cancelar</a>
+                        
                     </div>
                 </div>
             </form>

@@ -43,9 +43,7 @@
                 <span class="text-danger" asp-validation-for="PromotionDto.Description"></span>
             </div>
             <br/>
-            <button type="submit" class="btn btn-primary mr-3">Save</button>
-            <a href="" class="btn btn-light btn-lg btn-block">Actualizar</a>
-            <a href="" class="btn btn-light btn-lg btn-block">Borrar</a>
+            <button type="submit" class="btn btn-light btn-lg btn-block">Guardar</button>
             <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
 
         </div>
@@ -83,10 +81,11 @@
                         <td>@promotion.Description</td>
                         <td>
                             <a a-asp-area="" asp-page="/Promotion/Edit" asp-route-id="@promotion.id"
-                               class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                               class="btn btn-light btn-sm btn-block" role="button">Editar</a>
+                            <br/>
                             <br/>
                             <a a-asp-area="" asp-page="/Promotion/Delete" asp-route-id="@promotion.id"
-                               class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                               class="btn btn-light btn-sm btn-block" role="button">Borrar</a>
                         </td>
                     </tr>
                 }
