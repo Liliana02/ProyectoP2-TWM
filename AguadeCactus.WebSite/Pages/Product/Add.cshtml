@@ -16,22 +16,23 @@
         
 </head>
 <body>
-<div>
+<div class="container mt-5">
     <form method="post">
         <h1 class="text-white">Productos</h1>
         <div>
             <input type="hidden"/>
+            <label asp-for="ProductDto.Name" class="text-white">Nombre</label>
             <input asp-for="ProductDto.Name" type="text" class="form-control" placeholder="Nombre" maxlength="45">
             <span class="text-danger" asp-validation-for="ProductDto.Name"></span>
                         
             <br/>
-            
-            <input asp-for="ProductDto.Price" type="text" class="form-control" placeholder="Precio" maxlength="45">
+            <label asp-for="ProductDto.Price" class="text-white">Precio</label>
+            <input asp-for="ProductDto.Price" type="number" class="form-control" placeholder="Precio">
             <span class="text-danger" asp-validation-for="ProductDto.Price"></span>
             
             <br/>
-            <div class="form-group col-md-4">
-                <label for="inputSize">Tamaño</label>
+            <div class="form-group">
+                <label asp-for="ProductDto.Size" class="text-white">Tamaño</label>
                 <select asp-for="ProductDto.Size" id="inputSize" class="form-control">
                     <option selected>Chico</option>
                     <option>Mediano</option>
@@ -42,7 +43,7 @@
             
             <br/>
             <div class="form-group">
-                <label for="Category">Categoria</label>
+                <label asp-for="ProductDto.IdCategory" class="text-white">Categoria</label>
                 <select id="Category" name="SelectedOption" class="form-control" asp-for="ProductDto.IdCategory">
                     @foreach (var category in Model.Categories)
                     {
@@ -55,15 +56,17 @@
             
             
             <div class="form-group">
-                <label for="FormControlDescription"></label>
-                <textarea asp-for="ProductDto.Description" class="form-control" id="FormControlDescription" rows="3" placeholder="Descripción", maxlength="45"></textarea>
+                <label asp-for="ProductDto.Description" class="text-white">Descripción</label>
+                <textarea asp-for="ProductDto.Description" class="form-control" id="FormControlDescription" rows="3" placeholder="Descripción", maxlength="100"></textarea>
                 <span class="text-danger" asp-validation-for="ProductDto.Description"></span>
             </div>
             <br/>
-            <button type="submit" class="btn btn-light btn-lg btn-block">Save</button>
-            <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
+
+            
 
         </div>
+            <button type="submit" class="btn btn-light btn-lg btn-block">Guardar</button>
+            <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
         @if (Model.Errors.Count > 0) 
         { 
             <div class="alert alert-danger" role="alert">
