@@ -32,10 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Category/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcnlcTGlzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,10 +58,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/PaymentMethod/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudE1ldGhvZFxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/PaymentMethod/List.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudE1ldGhvZFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/Privacy.cshtml]

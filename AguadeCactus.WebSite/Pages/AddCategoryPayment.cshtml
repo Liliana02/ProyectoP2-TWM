@@ -62,6 +62,63 @@
             </div>
         </div>
     </form>
+    <form method="get">
+            
+            
+        </form>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-10">
+            <table class="table">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th></th>
+                </tr>
+                @foreach (var category in @Model.Categories)
+                {
+                    <tr>
+                        <td>@category.Name</td>
+                        <td>@category.Description</td>
+                        <td>
+                            <a a-asp-area="" asp-page="/Category/Edit" asp-route-id="@category.id"
+                               class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                            <br/>
+                            <a a-asp-area="" asp-page="/Category/Delete" asp-route-id="@category.id"
+                               class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-10">
+            <table class="table">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th></th>
+                </tr>
+                @foreach (var paymentMethod in @Model.PaymentMethods)
+                {
+                    <tr>
+                        <td>@paymentMethod.Name</td>
+                        <td>@paymentMethod.Description</td>
+                        <td>
+                            <a a-asp-area="" asp-page="/Category/Edit" asp-route-id="@paymentMethod.id"
+                               class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                            <br/>
+                            <a a-asp-area="" asp-page="/Category/Delete" asp-route-id="@paymentMethod.id"
+                               class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    
 </div>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>

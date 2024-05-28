@@ -12,6 +12,8 @@ public class AddCategoryPayment : PageModel
     [BindProperty] public PaymentMethodDto PaymentMethodDto { get; set; }
 
     public List<string> Errors { get; set; } = new List<string>();
+    public List<CategoryDto> Categories { get; set; }
+    public List<PaymentMethodDto> PaymentMethods { get; set; }
     
     private readonly ICategoryService _serviceC;
     private readonly IPaymentMethodService _serviceP;
@@ -20,10 +22,12 @@ public class AddCategoryPayment : PageModel
 
     public AddCategoryPayment(ICategoryService serviceC, IPaymentMethodService serviceP)
     {
+        Categories = new List<CategoryDto>();
+        PaymentMethods = new List<PaymentMethodDto>();
         _serviceC = serviceC;
         _serviceP = serviceP;
     }
-    public async Task<IActionResult> OnGet(int? id)
+    public async Task<IActionResult> OnGetId(int? id)
     {
         CategoryDto = new CategoryDto();
         PaymentMethodDto = new PaymentMethodDto();
@@ -47,9 +51,18 @@ public class AddCategoryPayment : PageModel
 
         return Page();
     }
-    
-    
 
+
+
+    public async Task<IActionResult> OnGet()
+    {
+        var responseC = await _serviceC.GetAllAsync();
+        var responseP = await _serviceP.GetAllAsync();
+        Categories = responseC.Data;
+        PaymentMethods = responseP.Data;
+        
+        return Page();
+    }
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)
