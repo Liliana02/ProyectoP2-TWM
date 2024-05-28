@@ -48,10 +48,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdFNhbGVzRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/PaymentMethod/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudE1ldGhvZFxBZGQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Desarrollo web/ProyectoP2-TWM/ProyectoP2-TWM/AguadeCactus.WebSite/Pages/PaymentMethod/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF5bWVudE1ldGhvZFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
