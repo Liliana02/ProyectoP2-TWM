@@ -7,19 +7,67 @@
 
 <html>
 <head>
-    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AguadeCactus.WebSite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/category.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AguadeCactus.WebSite.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css"/>
 </head>
 <body>
-<div>
-    <h1 class="text-white">Ventas Realizadas</h1>
-    <div>
-        <h3 class="text-white">Detalles</h3>
-    </div>
-    <div>
-        <h3 class="text-white">Ventas</h3>    
-    </div>
-    <a href="" class="btn btn-light btn-lg btn-block">Cancelar</a>
+<div class="container-fluid">
+    <form method="get">
+    </form>
     
+    <div class="row">
+        <h2>Detalles</h2>
+        <div class="col-md-1"></div>
+        <div class="col-10">
+            <table class="table">
+                <tr>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Producto</th>
+                    <th></th>
+                </tr>
+                @foreach (var saleDetail in @Model.SaleDetails)
+                {
+                    <tr>
+                        <td>@saleDetail.Quantity</td>
+                        <td>@saleDetail.Subtotal</td>
+                        <td>@saleDetail.IdProduct</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <h2>Ventas</h2>
+        <div class="col-md-1"></div>
+        <div class="col-10">
+            <table class="table">
+                <tr>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Usuario</th>
+                    <th>Detalles de venta</th>
+                    <th>Metodo de pago</th>
+                    <th></th>
+                </tr>
+                @foreach (var sale in @Model.Sales)
+                {
+                    <tr>
+                        <td>@sale.Date</td>
+                        <td>@sale.Total</td>
+                        <td>@sale.IdUser</td>
+                        <td>@sale.IdSaleDetail</td>
+                        <td>@sale.IdPaymentMethod</td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>

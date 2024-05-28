@@ -25,6 +25,7 @@
     </nav>
 </header>
 <div class="container center-content-container">
+
     <main role="main" class="pb-3">
         <div class="center-image-text">
             <div>
@@ -36,24 +37,28 @@
                 <br/>
                 <!-- Email input -->
                 <div data-mdb-input-init class="form-outline mb-4">
-                    <label class="form-label" for="loginName">Usuario</label>
+                    <label class="form-label" for="UserName">Usuario</label>
                     <br/>
-                    <input type="email" id="loginName" class="form-control"/>
+                    <input asp-for="UserDto.UserName" type="text" class="form-control" placeholder="Usuario" maxlength="45">
+                    <span class="text-danger" asp-validation-for="UserDto.UserName"></span>
+
 
                 </div>
                 <!-- Password input -->
                 <div data-mdb-input-init class="form-outline mb-4">
                     <label class="form-label" for="loginPassword">Contraseña</label>
                     <br/>
-                    <input type="password" id="loginPassword" class="form-control"/>
+                    <input asp-for="UserDto.Password" type="password" class="form-control" placeholder="Contraseña" maxlength="45">
+                    <span class="text-danger" asp-validation-for="UserDto.Password"></span>
+
 
                 </div>
                 <a href="~/Index" class="btn btn-light btn-lg btn-block">Ingresar</a>
                 <br/>
                 <!-- Register buttons -->
-                      <div class="text-center">
-                        <p>¿Nuevo usuario? <a href="~/User/Add">Crear cuenta</a></p>
-                      </div>
+                <div class="text-center">
+                    <p>¿Nuevo usuario? <a href="~/User/Add">Crear cuenta</a></p>
+                </div>
             </div>
         </div>
     </main>

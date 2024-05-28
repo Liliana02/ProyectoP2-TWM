@@ -26,14 +26,17 @@
         <!--Espacio de detalles de venta-->
         <h2 class="text-white">Detalles</h2>
 
-        <div class="form-group col-md-4">
-            <label for="inputProduct">Producto</label>
-            <select id="inputProduct" class="form-control">
-                <option selected>Producto</option>
-                <option>...</option>
-                <option>...</option>
+        <div class="form-group">
+            <label asp-for="SaleDetailDto.IdProduct" class="text-white">Producto</label>
+            <select id="Product" name="SelectedOption" class="form-control" asp-for="SaleDetailDto.IdProduct">
+                @foreach (var product in Model.Products)
+                {
+                    <option value="@product.id">@product.Name</option>
+                }
             </select>
+            <span class="text-danger" asp-validation-for="SaleDetailDto.IdProduct"></span>
         </div>
+        
         
         <div class="container">
             <div class="quantity-container">
@@ -48,35 +51,44 @@
     <div>
         <!--Espacio para ventas-->
         <h2 class="text-white">Venta</h2>
-        <div class="form-group col-md-4">
-            <label for="inputPaymentMethod">Método de pago</label>
-            <select id="inputPaymentMethod" class="form-control">
-                <option selected>Efectivo</option>
-                <option>Transferencia</option>
-                <option>Tarjeta</option>
+        <div class="form-group">
+            <label asp-for="SaleDto.IdPaymentMethod" class="text-white">Metodo de pago</label>
+            <select id="PaymentMethod" name="SelectedOption" class="form-control" asp-for="SaleDto.IdPaymentMethod">
+                @foreach (var paymentMethod in Model.PaymentMethods)
+                {
+                    <option value="@paymentMethod.id">@paymentMethod.Name</option>
+                }
             </select>
+            <span class="text-danger" asp-validation-for="SaleDto.IdPaymentMethod"></span>
         </div>
+        
         <input type="text" class="form-control" placeholder="Total">
         <div class="form-group">
             <label for="Birthdate">BirthDate:</label>
             <input id="Birthdate" class="form-control" type="date" asp-for="SaleDto.Date" required/>
         </div>
-        <div class="form-group col-md-4">
-            <label for="inputUser">Usuario</label>
-            <select id="inputUser" class="form-control">
-                <option selected>1</option>
-                <option>2</option>
-                <option>3</option>
+        <div class="form-group">
+            <label asp-for="SaleDto.IdUser" class="text-white">Usuario</label>
+            <select id="User" name="SelectedOption" class="form-control" asp-for="SaleDto.IdUser">
+                @foreach (var user in Model.Users)
+                {
+                    <option value="@user.id">@user.Name</option>
+                }
             </select>
+            <span class="text-danger" asp-validation-for="SaleDto.IdUser"></span>
         </div>
-        <div class="form-group col-md-4">
-            <label for="inputSaleDetail">Detalle de venta</label>
-            <select id="inputSaleDetail" class="form-control">
-                <option selected>1</option>
-                <option>2</option>
-                <option>3</option>
+        
+        <div class="form-group">
+            <label asp-for="SaleDto.IdSaleDetail" class="text-white">Metodo de pago</label>
+            <select id="SaleDetail" name="SelectedOption" class="form-control" asp-for="SaleDto.IdPaymentMethod">
+                @foreach (var paymentMethod in Model.PaymentMethods)
+                {
+                    <option value="@paymentMethod.id">@paymentMethod.Name</option>
+                }
             </select>
+            <span class="text-danger" asp-validation-for="SaleDto.IdPaymentMethod"></span>
         </div>
+        
         
     </div>
 </div>
