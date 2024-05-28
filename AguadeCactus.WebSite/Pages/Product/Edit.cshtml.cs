@@ -12,29 +12,32 @@ public class Edit : PageModel
 
     public List<string> Errors { get; set; } = new List<string>();
 
-    private readonly IProductService _service;
+    private readonly IProductService _serviceP;
+    private readonly ICategoryService _serviceC;
 
-    public Edit(IProductService service)
+    public List<CategoryDto> Categories { get; set; }
+    [BindProperty] public int SelectedOption { get; set; }
+
+    public Edit(IProductService serviceP, ICategoryService serviceC)
     {
-        _service = service;
+        Categories = new List<CategoryDto>();
+        _serviceP = serviceP;
+        _serviceC = serviceC;
     }
 
     public async Task<IActionResult> OnGet(int? id)
     {
         ProductDto = new ProductDto();
-
+        
+        var responseC = await _serviceC.GetAllAsync();
+        Categories = responseC.Data;
         if (id.HasValue)
         {
             //Obtener informacion del servicio API
-            var response = await _service.GetById(id.Value);
+            var response = await _serviceP.GetById(id.Value);
             ProductDto = response.Data;
         }
-
-        if (ProductDto == null)
-        {
-            return RedirectToPage("/Error");
-        }
-
+        
         return Page();
     }
     
@@ -46,18 +49,26 @@ public class Edit : PageModel
         }
 
         Response<ProductDto> response;
+        
         if (ProductDto.id > 0)
         {
-            //Actualización
-            response = await _service.UpdateAsync(ProductDto);
+            // Actualización
+            var categorySelected = new { option = SelectedOption };
+            int a = SelectedOption;
+            ProductDto.IdCategory = a;
+            response = await _serviceP.UpdateAsync(ProductDto);
+            
         }
         else
         {
-            //Insercción
-            response = await _service.SaveAsync(ProductDto);
+            // Inserción
+            var categorySelected = new { option = SelectedOption };
+            int a = SelectedOption;
+            ProductDto.IdCategory = a;
+            response = await _serviceP.SaveAsync(ProductDto);
         }
-
         Errors = response.Errors;
+
         if (Errors.Count > 0)
         {
             return Page();
