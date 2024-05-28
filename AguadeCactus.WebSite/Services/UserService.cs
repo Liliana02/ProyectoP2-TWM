@@ -78,4 +78,15 @@ public class UserService : IUserService
         
         return response;
     }
+
+    public async Task<Response<UserDto>> LoginAsync(string UserName, string Password)
+    {
+        var url = $"{_baseURL}{_endpoint}/login?UserName={Uri.EscapeDataString(UserName)}&Password={Uri.EscapeDataString(Password)}";
+        using var client = new HttpClient();
+        var res = await client.GetAsync(url);
+        var jsonResponse = await res.Content.ReadAsStringAsync();
+        var responseData = JsonConvert.DeserializeObject<Response<UserDto>>(jsonResponse);
+
+        return responseData;
+    }
 }

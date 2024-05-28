@@ -10,4 +10,5 @@ public interface IUserService
     Task<Response<UserDto>> SaveAsync(UserDto userDto);
     Task<Response<UserDto>> UpdateAsync(UserDto userDto);
     Task<Response<bool>> DeleteAsync(int id);
+    Task<Response<UserDto>> LoginAsync(string UserName, string Password);
 }

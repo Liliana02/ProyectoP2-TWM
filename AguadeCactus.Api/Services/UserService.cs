@@ -91,4 +91,15 @@ public class UserService : IUserService
         var user = await _userRepository.GetByName(name, id);
         return user != null;
     }
+
+    public async Task<UserDto> LoginAsync(string UserName, string Password)
+    {
+        var user = await _userRepository.GetLogin(UserName, Password);
+        if (user == null || user.Password != Password)
+        {
+            throw new Exception("User or password incorrect");
+        }
+
+        return new UserDto(user);
+    }
 }

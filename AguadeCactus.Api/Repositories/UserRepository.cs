@@ -58,4 +58,16 @@ public class UserRepository : IUserRepository
         var users = await _dbContext.Connection.QueryAsync<User>(sql);
         return users.ToList().FirstOrDefault();
     }
+
+    public async Task<User> GetByEmailAsync(string UserName, string Password)
+    {
+        const string sql = "SELECT * FROM User WHERE UserName = @UserName AND Password = @Password AND IsDeleted = 0";
+        var user = await _dbContext.Connection.QuerySingleOrDefaultAsync<User>(sql, new {UserName = UserName, Password = Password});
+        return user;
+    }
+
+    public async Task<User> GetLogin(string UserName, string Password)
+    {
+        return await GetByEmailAsync(UserName, Password);
+    }
 }

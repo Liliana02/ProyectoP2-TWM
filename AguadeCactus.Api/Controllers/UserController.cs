@@ -96,5 +96,21 @@ public class UserController : ControllerBase
         response.Data = await _userService.DeleteAsync(id);
         return Ok(response);
     }
+
+    [HttpGet("login")]
+    public async Task<ActionResult<Response<UserDto>>> Login([FromQuery] string UserName, [FromQuery] string Password)
+    {
+        var response = new Response<UserDto>();
+        try
+        {
+            response.Data = await _userService.LoginAsync(UserName, Password);
+            return Ok(response);
+        }
+        catch (Exception ex)
+        {
+            response.Errors.Add(ex.Message);
+            return Unauthorized(response);
+        }
+    }
     
 }

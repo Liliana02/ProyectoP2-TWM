@@ -21,4 +21,5 @@ public interface IUserService
     //Metodo para obtener una categoria por id
     Task<UserDto> GetById(int id);
     Task<bool> ExistByName(string name, int id = 0);
+    Task<UserDto> LoginAsync(string UserName, string Password);
 }

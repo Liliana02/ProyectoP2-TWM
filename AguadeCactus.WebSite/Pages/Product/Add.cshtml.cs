@@ -16,7 +16,6 @@ public class Add : PageModel
     private readonly IProductService _serviceP;
     private readonly ICategoryService _serviceC;
     public List<CategoryDto> Categories { get; set; }
-    public List<ProductDto> Products { get; set; }
     [BindProperty]
     public int SelectedOption { get; set; }
     
@@ -27,7 +26,7 @@ public class Add : PageModel
         _serviceC = serviceC;
     }
     
-    public async Task<IActionResult> OnGetId(int? id)
+    public async Task<IActionResult> OnGet(int? id)
     {
         ProductDto = new ProductDto();
         
@@ -39,14 +38,7 @@ public class Add : PageModel
             var response = await _serviceP.GetById(id.Value);
             ProductDto = response.Data;
         }
-
-        return Page();
-    }
-
-    public async Task<IActionResult> OnGet()
-    {
-        var responseP = await _serviceP.GetAllAsync();
-        Products = responseP.Data;
+        
         return Page();
     }
     

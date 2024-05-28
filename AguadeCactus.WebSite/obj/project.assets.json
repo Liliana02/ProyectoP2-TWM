@@ -746,11 +746,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
+      "projectUniqueName": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
       "projectName": "AguadeCactus.WebSite",
-      "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
+      "projectPath": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebSite\\AguadeCactus.WebSite.csproj",
       "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-      "outputPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebSite\\obj\\",
+      "outputPath": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebSite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
@@ -772,11 +772,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj": {
-              "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj"
+            "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj": {
+              "projectPath": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.Api\\AguadeCactus.Api.csproj"
             },
-            "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
-              "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
+            "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj": {
+              "projectPath": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.Core\\AguadeCactus.Core.csproj"
             }
           }
         }

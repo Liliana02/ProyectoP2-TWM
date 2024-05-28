@@ -1807,11 +1807,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebApp\\AguadeCactus.WebApp.csproj",
+      "projectUniqueName": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebApp\\AguadeCactus.WebApp.csproj",
       "projectName": "AguadeCactus.WebApp",
-      "projectPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebApp\\AguadeCactus.WebApp.csproj",
+      "projectPath": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebApp\\AguadeCactus.WebApp.csproj",
       "packagesPath": "C:\\Users\\Liliana Lozano\\.nuget\\packages\\",
-      "outputPath": "C:\\Desarrollo web\\ProyectoP2-TWM\\ProyectoP2-TWM\\AguadeCactus.WebApp\\obj\\",
+      "outputPath": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
