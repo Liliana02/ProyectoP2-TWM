@@ -49,10 +49,23 @@ body {
 }
 
 .center-image-text img.cactus-image {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 .form-control{
     background-color: black;
+}
+
+h2{
+    color: white;
+}
+td{
+    color: white;
+}
+th{
+    color: white;
+}
+h3{
+    color: white;
 }
