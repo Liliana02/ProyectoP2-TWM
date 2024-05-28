@@ -64,6 +64,6 @@ public class Edit : PageModel
         }
 
         ProductDto = response.Data;
-        return RedirectToPage("./Add");
+        return RedirectToPage("./List");
     }
 }

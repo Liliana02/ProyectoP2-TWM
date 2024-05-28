@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using AguadeCactus.Api.Dto;
+using AguadeCactus.Core.Http;
 using AguadeCactus.WebSite.Services;
 
 namespace AguadeCactus.WebSite.Pages.Product;
@@ -10,17 +11,24 @@ public class Delete : PageModel
     [BindProperty] public ProductDto ProductDto { get; set; }
 
     public List<string> Errors { get; set; } = new List<string>();
-    private readonly IProductService _service;
 
-    public Delete(IProductService service)
+    private readonly IProductService _serviceP;
+    private readonly ICategoryService _serviceC;
+    
+    public List<CategoryDto> Categories { get; set; }
+    [BindProperty] public int SelectedOption { get; set; }
+
+    public Delete(IProductService serviceP, ICategoryService serviceC)
     {
-        _service = service;
+        Categories = new List<CategoryDto>();
+        _serviceP = serviceP;
+        _serviceC = serviceC;
     }
     public async Task<IActionResult> OnGet(int id)
     {
         ProductDto = new ProductDto();
-        var response = await _service.GetById(id);
-        ProductDto = response.Data;
+        var responseP = await _serviceP.GetById(id);
+        ProductDto = responseP.Data;
 
         if (ProductDto == null)
         {
@@ -29,10 +37,9 @@ public class Delete : PageModel
 
         return Page();
     }
-
     public async Task<IActionResult> OnPostAsync()
     {
-        var response = await _service.DeleteAsync(ProductDto.id);
-        return RedirectToPage("./Add");
+        var responseP = await _serviceP.DeleteAsync(ProductDto.id);
+        return RedirectToPage("./List");
     }
 }
