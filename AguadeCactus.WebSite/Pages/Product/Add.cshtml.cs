@@ -16,6 +16,7 @@ public class Add : PageModel
     private readonly IProductService _serviceP;
     private readonly ICategoryService _serviceC;
     public List<CategoryDto> Categories { get; set; }
+    public List<ProductDto> Products { get; set; }
     [BindProperty]
     public int SelectedOption { get; set; }
     

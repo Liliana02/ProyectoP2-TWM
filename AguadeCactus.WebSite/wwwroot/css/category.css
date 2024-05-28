@@ -61,3 +61,13 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+h2{
+    color: white;
+}
+td{
+    color: white;
+}
+th{
+    color: white;
+}

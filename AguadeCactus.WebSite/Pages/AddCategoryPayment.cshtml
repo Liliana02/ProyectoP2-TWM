@@ -18,7 +18,7 @@
     <h1 class="text-white">Categorias y pagos</h1>
     <form method="post">
         <div class="row">
-            <div class="col-md-6">
+            <div>
                 <h2 class="text-white">Categorias</h2>
                 <div class="form-group">
                     <label asp-for="CategoryDto.Name" class="text-white">Nombre</label>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="CategoryDto.Description" class="text-white">Descripción</label>
-                    <input asp-for="CategoryDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
+                    <input asp-for="CategoryDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="100">
                     <span class="text-danger" asp-validation-for="CategoryDto.Description"></span>
                 </div>
 
@@ -39,7 +39,7 @@
                 </div>
                 <div class="form-group">
                     <label asp-for="PaymentMethodDto.Description" class="text-white">Descripción</label>
-                    <input asp-for="PaymentMethodDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="45">
+                    <input asp-for="PaymentMethodDto.Description" type="text" class="form-control" placeholder="Descripcion" maxlength="100">
                     <span class="text-danger" asp-validation-for="PaymentMethodDto.Description"></span>
                 </div>
 
@@ -58,6 +58,10 @@
 
             <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
                 <button type="submit" class="btn btn-light btn-lg btn-block mb-2">Agregar</button>
+                
+            </div>
+            <br/>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
                 <a href="/Index" class="btn btn-light btn-lg btn-block">Cancelar</a>
             </div>
         </div>
@@ -82,11 +86,13 @@
                         <td>@category.Description</td>
                         <td>
                             <a a-asp-area="" asp-page="/Category/Edit" asp-route-id="@category.id"
-                               class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                               class="btn btn-light btn-sm btn-block" role="button">Editar</a>
+                            <br/>
                             <br/>
                             <a a-asp-area="" asp-page="/Category/Delete" asp-route-id="@category.id"
-                               class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                               class="btn btn-light btn-sm btn-block" role="button">Borrar</a>
                         </td>
+                        
                     </tr>
                 }
             </table>
@@ -108,10 +114,11 @@
                         <td>@paymentMethod.Description</td>
                         <td>
                             <a a-asp-area="" asp-page="/PaymentMethod/Edit" asp-route-id="@paymentMethod.id"
-                               class="btn btn-light btn-lg btn-block" role="button">Edit</a>
+                               class="btn btn-light btn-sm btn-block" role="button">Editar</a>
+                            <br/>
                             <br/>
                             <a a-asp-area="" asp-page="/PaymentMethod/Delete" asp-route-id="@paymentMethod.id"
-                               class="btn btn-light btn-lg btn-block" role="button">Delete</a>
+                               class="btn btn-light btn-sm btn-block" role="button">Borrar</a>
                         </td>
                     </tr>
                 }
