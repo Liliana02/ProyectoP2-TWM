@@ -1,5 +1,5 @@
 ﻿@page
-@model AguadeCactus.WebSite.Pages.Add
+@model AguadeCactus.WebSite.Pages.Product.Add
 
 
 <!DOCTYPE html>
@@ -43,10 +43,12 @@
             <br/>
             <div class="form-group col-md-4">
                 <label for="inputCategory">Categoria</label>
-                <select asp-for="ProductDto.IdCategory" id="inputCategory" class="form-control">
-                    <option selected>1</option>
-                    <option>2</option>
-                    <option>3</option>
+                <select name="SelectedOption" asp-for="ProductDto.IdCategory" id="inputCategory" class="form-control">
+                    <option value="">Select option</option>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option value="@category.id">@category.Name</option>
+                    }
                 </select>
                 <span class="text-danger" asp-validation-for="ProductDto.IdCategory"></span>
             </div>

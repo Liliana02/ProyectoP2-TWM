@@ -4,38 +4,40 @@ using AguadeCactus.Api.Dto;
 using AguadeCactus.Core.Http;
 using AguadeCactus.WebSite.Services;
 
-namespace AguadeCactus.WebSite.Pages;
+namespace AguadeCactus.WebSite.Pages.Product;
 
 public class Add : PageModel
 {
     [BindProperty] public ProductDto ProductDto { get; set; }
-
+    public string Label { get; set; }
+    
     public List<string> Errors { get; set; } = new List<string>();
-    public List<ProductDto> Products { get; set; }
-
+    
     private readonly IProductService _serviceP;
-
-
-    public Add(IProductService serviceP)
+    private readonly ICategoryService _serviceC;
+    public List<CategoryDto> Categories { get; set; }
+    public List<ProductDto> Products { get; set; }
+    [BindProperty]
+    public int SelectedOption { get; set; }
+    
+    public Add(IProductService serviceP, ICategoryService serviceC)
     {
-        Products = new List<ProductDto>();
+        Categories = new List<CategoryDto>();
         _serviceP = serviceP;
+        _serviceC = serviceC;
     }
-
+    
     public async Task<IActionResult> OnGetId(int? id)
     {
         ProductDto = new ProductDto();
         
+        var responseC = await _serviceC.GetAllAsync();
+        Categories = responseC.Data;
         if (id.HasValue)
         {
-            var responseP = await _serviceP.GetById(id.Value);
-            ProductDto = responseP.Data;
-
-        }
-
-        if (ProductDto == null)
-        {
-            return Redirect("/Error");
+            //Obtener informacion del servicio API
+            var response = await _serviceP.GetById(id.Value);
+            ProductDto = response.Data;
         }
 
         return Page();
@@ -45,7 +47,6 @@ public class Add : PageModel
     {
         var responseP = await _serviceP.GetAllAsync();
         Products = responseP.Data;
-
         return Page();
     }
     
@@ -53,31 +54,37 @@ public class Add : PageModel
     {
         if (!ModelState.IsValid)
         {
-
             return Page();
         }
+
+        Response<ProductDto> response;
         
-        Response<ProductDto> responseP;
         if (ProductDto.id > 0)
         {
-            responseP = await _serviceP.UpdateAsync(ProductDto);
+            // Actualización
+            var categorySelected = new { option = SelectedOption };
+            int a = SelectedOption;
+            ProductDto.IdCategory = a;
+            response = await _serviceP.UpdateAsync(ProductDto);
+            
         }
         else
         {
-            responseP = await _serviceP.SaveAsync(ProductDto);
+            // Inserción
+            var categorySelected = new { option = SelectedOption };
+            int a = SelectedOption;
+            ProductDto.IdCategory = a;
+            response = await _serviceP.SaveAsync(ProductDto);
         }
+        Errors = response.Errors;
 
-
-        Errors = responseP.Errors;
         if (Errors.Count > 0)
         {
-
             return Page();
         }
 
-        ProductDto = responseP.Data;
-        return RedirectToPage("./AddCategoryPayment");
+        ProductDto = response.Data;
+        return RedirectToPage("./Add");
     }
+
 }
-
-
