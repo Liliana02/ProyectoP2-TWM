@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jAG/Yu4CsXJGpTIZR6c+A/QM5aL4xlLEikVuKLzPeng=",
+  "Hash": "gkhNNUnWtFV/wN47U/3gFUnhbTOPG2tpSNE9bK2ZohE=",
   "Source": "AguadeCactus.WebSite",
   "BasePath": "_content/AguadeCactus.WebSite",
   "Mode": "Default",
@@ -95,6 +95,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\category.css"
+    },
+    {
+      "Identity": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\css\\listproductpromotion.css",
+      "SourceId": "AguadeCactus.WebSite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\",
+      "BasePath": "_content/AguadeCactus.WebSite",
+      "RelativePath": "css/listproductpromotion.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\listproductpromotion.css"
     },
     {
       "Identity": "C:\\ProyectoFinal Web\\ProyectoP2-TWM\\AguadeCactus.WebSite\\wwwroot\\css\\menu.css",
